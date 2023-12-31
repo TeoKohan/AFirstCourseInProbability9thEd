@@ -1,0 +1,12 @@
+\item Compute the probability that a bridge hand is void in at least one suit. Note that the answer is not
+\[ \frac{\binom{4}{1} * \binom{39}{13}}{\binom{52}{13}} \]
+Why not?
+
+Los casos no son necesariamente disjuntos, hay manos que no tienen ninguna carta de dos o tres palos.
+
+Sea $E_i$ el evento tal que la mano de bridge no tiene ninguna carta del palo $i$, $i = 1,2,3,4$.
+\begin{align*}
+    &\phantom{{}={}} P(E_1\cup E_2\cup E_3\cup E_4)\\
+    &= \binom{4}{1} * \frac{\binom{39}{13}}{\binom{52}{13}}
+    -  \binom{4}{2} * \frac{\binom{26}{13}}{\binom{52}{13}} + \binom{4}{3} * \frac{\binom{13}{13}}{\binom{52}{13}}
+\end{align*}

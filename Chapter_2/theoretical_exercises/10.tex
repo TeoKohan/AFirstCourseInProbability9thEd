@@ -1,0 +1,32 @@
+\item Prove that 
+\begin{align*}
+    &\phantom{{}={}} P(E \cup F \cup G)\\
+    &= P(E) + P(F) + P(G) - {}\\
+    &\phantom{{}={}} P(E^cFG) - P(EF^cG) - P(EFG^c) - {}\\
+    &\phantom{{}={}} 2 P(EFG)
+\end{align*}
+
+\begin{proof}[Demostración] de la equivalencia anterior.
+    \begin{align*}
+        &\phantom{{}={}} P(E \cup F \cup G)\\
+        &= P(E) + P(F \cup G) - P(E (F \cup G))\\
+        &= P(E) + P(F) + P(G) - {}\\
+        &\phantom{{}={}} P(FG) - P(E (F \cup G))\\
+        &= P(E) + P(F) + P(G) - {}\\
+        &\phantom{{}={}} P(FG) - P((E F) \cup (E G))\\
+        &= P(E) + P(F) + P(G) - {}\\
+        &\phantom{{}={}} P(FG) - P(EF) - P(EG) + P(EFG)\\
+        &= P(E) + P(F) + P(G) - {}\\
+        &\phantom{{}={}} (P(EFG) P(E^cFG)) - {}\\
+        &\phantom{{}={}} (P(EFG) + P(EFG^c)) - {}\\
+        &\phantom{{}={}} (P(EFG) + P(EF^cG)) + {}\\
+        &\phantom{{}={}} P(EFG)\\
+        &= P(E) + P(F) + P(G) - 3 P(EFG) - {}\\
+        &\phantom{{}={}} P(E^cFG) - P(EFG^c) - P(EF^cG) + {}\\
+        &\phantom{{}={}} P(EFG)\\
+        &= P(E) + P(F) + P(G) - {}\\
+        &\phantom{{}={}} P(E^cFG) - P(EFG^c) - P(EF^cG) - {}\\
+        &\phantom{{}={}} 2 P(EFG) \qedhere
+    \end{align*}
+    
+\end{proof}

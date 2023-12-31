@@ -1,0 +1,11 @@
+\item A group of individuals containing $b$ boys and $g$ girls is lined up in random order; that is, each of the $(b + g)!$ permutations is assumed to be equally likely. What is the probability that the person in the $i$th position, $1 \le i \le b + g$, is a girl?
+
+Si fijamos el contenido de la posición $i$-ésima en chico entonces hay $\frac{(b+g-1)!}{(b-1)!*g!}$ permutaciones tal que la $i$-ésima posición es un chico. Si fijamos el contenido de la posición $i$-ésima en chica entonces hay $\frac{(b+g-1)!}{b!*(g-1)!}$ permutaciones tal que la $i$-ésima posición es una chica.
+
+Por lo tanto la probabilidad de que la $i$-ésima posición sea una chica es de
+\[ \frac{\frac{(b+g-1)!}{b!*(g-1)!}}{\frac{(b+g)!}{b! * g!}} 
+= 
+\frac{(b+g-1)! * b! * g!}{b!*(g-1)! * (b+g)!}
+=
+\frac{g}{b+g}
+\]

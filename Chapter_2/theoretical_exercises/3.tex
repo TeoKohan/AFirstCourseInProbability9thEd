@@ -1,0 +1,16 @@
+\item $F = FE \cup FE^c$ and $E \cup F = E \cup E^cF$.
+
+\begin{proof}[Demostración] de la relación anterior.
+
+    \begin{align*}
+        F &= FS\\
+        &= F (E\cup E^c)\\
+        &= FE \cup F E^c
+        \shortintertext{y}
+        E \cup F &= (E \cup F)(E\cup E^c)\\
+        &= ((E\cup F)E) \cup ((E\cup F)E^c)\\
+        &= E \cup ((E^c E)\cup(E^c F))\\
+        &= E \cup (\varnothing\cup(E^c F))\\
+        &= E \cup E^c F \qedhere
+    \end{align*}
+\end{proof}

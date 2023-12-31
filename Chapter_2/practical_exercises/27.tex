@@ -1,0 +1,15 @@
+\item An urn contains 3 red and 7 black balls. Players $A$ and $B$ withdraw balls from the urn consecutively until a red ball is selected. Find the probability that $A$ selects the red ball. ($A$ draws the first ball, then $B$, and so on. There is no replacement of the balls drawn.)
+
+Sea $P(E_i)$, $i = 1,2,\dots,10$ la probabilidad que gane $A$ cuando se retira la $i$-ésima bolilla.
+\begin{align*}
+    P(E_1) &= \frac{3}{10}\\
+    P(E_3) &= \frac{7}{10} * \frac{6}{9} * \frac{3}{8}\\
+    P(E_5) &= \frac{7}{10} * \frac{6}{9} * \frac{5}{8} * \frac{4}{7} * \frac{3}{6}\\
+    P(E_7) &= \frac{7}{10} * \frac{6}{9} * \frac{5}{8} * \frac{4}{7} * \frac{3}{6} * \frac{2}{5} * \frac{3}{4}\\
+    P(E_9) &= 0
+\end{align*}
+\begin{align*}
+    &\phantom{{}={}} P(E_1) + P(E_3) + P(E_5) + P(E_7)\\
+    &= \frac{3}{10} + \frac{7}{10} * \frac{6}{9} * \Big( \frac{3}{8} + \frac{5}{8} * \frac{4}{7} * \Big(\frac{3}{6} + \frac{3}{6} * \frac{2}{5} * \frac{3}{4}\Big)\Big)\\
+    &= \frac{7}{12}
+\end{align*}

@@ -1,0 +1,205 @@
+\item Use Venn diagrams
+\begin{enumerate}
+    \item to simplify $(E \cup F)(E \cup F^c)$
+    \[
+    \begin{tikzpicture}[scale=0.75]
+    \fill[fill=black!50] ( 90:.75) circle (1) (210:.75) circle (1);
+    \foreach \a/\l in {90/E,210/F,330/G} {
+        \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
+    }
+    \node at (0, -2) {$E \cup F$};
+    \end{tikzpicture}
+    \hspace{1em}
+    \begin{tikzpicture}[scale=0.75]
+    \fill[fill=black!50] (90:.75) circle (1);
+    \scope[even odd rule]
+        \clip ( 90:.75) circle (1) (330:.75) circle (1);
+        \clip (210:.75) circle (1) (330:.75) circle (1);
+        \fill[fill=black!50] (330:.75) circle (1);
+    \endscope
+    \foreach \a/\l in {90/E,210/F,330/G} {
+        \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
+    }
+    \node at (0, -2) {$E \cup F^c$};
+    \end{tikzpicture}
+    \]
+    su intersección
+    \[
+    \begin{tikzpicture}[scale=0.75]
+    \fill[fill=black!50] (90:.75) circle (1);
+    \foreach \a/\l in {90/E,210/F,330/G} {
+        \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
+    }
+    \node at (0, -2) {$(E \cup F) (E \cup F^c)$};
+    \end{tikzpicture}
+    \]
+    \item to prove DeMorgan’s laws for events $E$ and $F$. (prove $(E \cup F)^c = E^cF^c$, and $(EF)^c = E^c \cup F^c$)
+
+    \begin{proof}[Demostración] $(E \cup F)^c = E^cF^c$
+        \[
+        \begin{tikzpicture}[scale=0.75]
+        \fill[fill=black!50] ( 90:.75) circle (1) (210:.75) circle (1);
+        \foreach \a/\l in {90/E,210/F,330/G} {
+            \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
+        }
+        \node at (0, -2) {$E \cup F$};
+        \end{tikzpicture}
+        \]
+        su complemento
+        \[
+        \begin{tikzpicture}[scale=0.75]
+        \scope[even odd rule]
+            \clip ( 90:.75) circle (1) (330:.75) circle (1);
+            \clip (210:.75) circle (1) (330:.75) circle (1);
+            \fill[fill=black!50] (330:.75) circle (1);
+        \endscope
+        \foreach \a/\l in {90/E,210/F,330/G} {
+            \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
+        }
+        \node at (0, -2) {$(E \cup F)^c$};
+        \end{tikzpicture}
+        \]
+        \[
+        \begin{tikzpicture}[scale=0.75]
+        \scope[even odd rule]
+            \clip (210:.75) circle (1) (330:.75) circle (1);
+            \clip ( 90:.75) circle (1) (210:.75) circle (1);
+            \fill[fill=black!50] (210:.75) circle (1);
+        \endscope
+        \scope[even odd rule]
+            \clip ( 90:.75) circle (1) (330:.75) circle (1);
+            \fill[fill=black!50] (330:.75) circle (1);
+        \endscope
+        \foreach \a/\l in {90/E,210/F,330/G} {
+            \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
+        }
+        \node at (0, -2) {$E^c$};
+        \end{tikzpicture}
+        \hspace{1em}
+        \begin{tikzpicture}[scale=0.75]
+        \scope[even odd rule]
+            \clip ( 90:.75) circle (1) (210:.75) circle (1);
+            \clip (330:.75) circle (1) ( 90:.75) circle (1);
+            \fill[fill=black!50] ( 90:.75) circle (1);
+        \endscope
+        \scope[even odd rule]
+            \clip (210:.75) circle (1) (330:.75) circle (1);
+            \fill[fill=black!50] (330:.75) circle (1);
+        \endscope
+        \foreach \a/\l in {90/E,210/F,330/G} {
+            \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
+        }
+        \node at (0, -2) {$F^c$};
+        \end{tikzpicture}
+        \]
+        su intersección
+        \[
+        \begin{tikzpicture}[scale=0.75]
+        \scope[even odd rule]
+            \clip ( 90:.75) circle (1) (330:.75) circle (1);
+            \clip (210:.75) circle (1) (330:.75) circle (1);
+            \fill[fill=black!50] (330:.75) circle (1);
+        \endscope
+        \foreach \a/\l in {90/E,210/F,330/G} {
+            \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
+        }
+        \node at (0, -2) {$E^c F^c$};
+        \end{tikzpicture}
+        \qedhere \]
+    \end{proof}
+    
+    
+    \begin{proof}[Demostración] $(EF)^c = E^c \cup F^c$
+        \[
+        \begin{tikzpicture}[scale=0.75]
+        \scope
+            \clip (210:.75) circle (1);
+            \fill[fill=black!50] ( 90:.75) circle (1);
+        \endscope
+        \foreach \a/\l in {90/E,210/F,330/G} {
+            \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
+        }
+        \node at (0, -2) {$EF$};
+        \end{tikzpicture}
+        \]
+        su complemento
+        \[
+        \begin{tikzpicture}[scale=0.75]
+        \scope[even odd rule]
+            \clip ( 90:.75) circle (1) (210:.75) circle (1);
+            \fill[fill=black!50] (210:.75) circle (1);
+        \endscope
+        \scope[even odd rule]
+            \clip ( 90:.75) circle (1) (210:.75) circle (1);
+            \fill[fill=black!50] (90:.75) circle (1);
+        \endscope
+        \scope[even odd rule]
+            \clip ( 90:.75) circle (1) (330:.75) circle (1);
+            \clip (210:.75) circle (1) (330:.75) circle (1);
+            \fill[fill=black!50] (330:.75) circle (1);
+        \endscope
+        \foreach \a/\l in {90/E,210/F,330/G} {
+            \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
+        }
+        \node at (0, -2) {$(EF)^c$};
+        \end{tikzpicture}
+        \]
+        \[
+        \begin{tikzpicture}[scale=0.75]
+        \scope[even odd rule]
+            \clip (210:.75) circle (1) (330:.75) circle (1);
+            \clip ( 90:.75) circle (1) (210:.75) circle (1);
+            \fill[fill=black!50] (210:.75) circle (1);
+        \endscope
+        \scope[even odd rule]
+            \clip ( 90:.75) circle (1) (330:.75) circle (1);
+            \fill[fill=black!50] (330:.75) circle (1);
+        \endscope
+        \foreach \a/\l in {90/E,210/F,330/G} {
+            \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
+        }
+        \node at (0, -2) {$E^c$};
+        \end{tikzpicture}
+        \hspace{1em}
+        \begin{tikzpicture}[scale=0.75]
+        \scope[even odd rule]
+            \clip ( 90:.75) circle (1) (210:.75) circle (1);
+            \clip (330:.75) circle (1) ( 90:.75) circle (1);
+            \fill[fill=black!50] ( 90:.75) circle (1);
+        \endscope
+        \scope[even odd rule]
+            \clip (210:.75) circle (1) (330:.75) circle (1);
+            \fill[fill=black!50] (330:.75) circle (1);
+        \endscope
+        \foreach \a/\l in {90/E,210/F,330/G} {
+            \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
+        }
+        \node at (0, -2) {$F^c$};
+        \end{tikzpicture}
+        \]
+        su unión
+        \[
+        \begin{tikzpicture}[scale=0.75]
+        \scope[even odd rule]
+            \clip ( 90:.75) circle (1) (210:.75) circle (1);
+            \fill[fill=black!50] (210:.75) circle (1);
+        \endscope
+        \scope[even odd rule]
+            \clip ( 90:.75) circle (1) (210:.75) circle (1);
+            \fill[fill=black!50] (90:.75) circle (1);
+        \endscope
+        \scope[even odd rule]
+            \clip ( 90:.75) circle (1) (330:.75) circle (1);
+            \clip (210:.75) circle (1) (330:.75) circle (1);
+            \fill[fill=black!50] (330:.75) circle (1);
+        \endscope
+        \foreach \a/\l in {90/E,210/F,330/G} {
+            \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
+        }
+        \node at (0, -2) {$E^c \cup F^c$};
+        \end{tikzpicture} \qedhere
+        \]
+    \end{proof}
+    
+    
+\end{enumerate}

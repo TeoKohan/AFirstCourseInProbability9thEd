@@ -1,0 +1,15 @@
+\item Consider the matching problem, Example 5m, and define $A_n$ to be the number of ways in which the $N$ men can select their hats so that no man selects his own. Argue that
+\[ A_N = (N-1) (A_{N-1} + A_{N-2}) \]
+This formula, along with the boundary conditions $A_1 = 0$, $A_2 = 1$, can then be solved for $A_n$, and the desired probability of no matches would be $A_n/N!$.
+
+\emph{Hint:} After the first man selects a hat that is not his own, there remain $N - 1$ men to select among a set of $N - 1$ hats that does not contain the hat of one of these men. Thus, there is one extra man and one extra hat. Argue that we can get no matches either with the extra man selecting the extra hat or with the extra man not selecting the extra hat.
+
+Si el hombre $i$-ésimo elige el sombrero $j$-ésimo con $i \ne j$ entonces nos queda un hombre sin su sombrero y un sombrero sin su correspondiente dueño.
+
+Para obtener un emparejamiento donde ningún hombre obtiene su sombrero podemos,
+
+emparejar al $j$-ésimo hombre con el $i$-ésimo sombrero, en cuyo caso nos queda ordenar a $N-2$ hombres y sus sombreros, ó
+
+no emparejar al $j$-ésimo hombre con el $i$-ésimo sombrero, en cuyo caso podemos pensar que el $i$-ésimo sombrero pertenecía al $j$-ésimo hombre y nos queda ordenar a $N-1$ hombres y sus sombreros.
+
+Donde tenemos $N-1$ formas de seleccionar $j$ tal que $i \ne j$.

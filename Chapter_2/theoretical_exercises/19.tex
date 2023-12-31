@@ -1,0 +1,5 @@
+\item An urn contains $n$ red and $m$ blue balls. They are withdrawn one at a time until a total of $r$, $r \le n$, red balls have been withdrawn. Find the probability that a total of $k$ balls are withdrawn.
+
+\emph{Hint:} A total of $k$ balls will be withdrawn if there are $r - 1$ red balls in the first $k - 1$ withdrawals and the $k$th withdrawal is a red ball.
+
+\[ \frac{\binom{n}{r} * \binom{m}{k-r} * r}{\binom{n+m}{k} * k} \]

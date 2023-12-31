@@ -1,0 +1,24 @@
+\item Suppose that an experiment is performed $n$ times. For any event $E$ of the sample space, let $n(E)$ denote the number of times that event $E$ occurs and define $f(E) = \tfrac{n(E)}{n}$. Show that $f(\,*\,)$ satisfies Axioms 1, 2, and 3.
+
+\begin{proof}[Demostración] $f(\,*\,)$ satisface los axiomas 1, 2, y 3.
+    \begin{enumerate}
+        \item[1.] $0 \le f(E) \le 1$
+        
+        Un experimento realizado $n$ veces puede fallar como mucho todas las veces y como mínimo ninguna vez
+        \[ 0 \le \frac{0}{n} \le f(E) \le \frac{n}{n} \le 1 \]
+        \item[2.] $f(S) = 1$ 
+
+        Por definición $n(S) = n$ luego
+        \[ f(S) = \frac{n(S)}{n} = \frac{n}{n} = 1 \]
+        \item[3.] $f\left ( \bigcup_{i=1}^\infty E_i \right ) = \sum_{i=1}^\infty f(E_i)$ 
+
+        supongamos que ocurre $n_1$ veces el evento $E_1$, $n_2$ veces el evento $E_2$, $\dots$, entonces como los eventos son disjuntos
+        \begin{align*}
+            f\left ( \bigcup_{i=1}^\infty E_i \right ) &= \frac{n\left ( \bigcup_{i=1}^\infty E_i \right )}{n}\\
+            &= \frac{n_1 + n_2 + \cdots}{n}\\
+            &= \frac{n_1}{n}  + \frac{n_2}{n} + \cdots\\
+            &= f(E_1) + f(E_2) + \cdots\\
+            &= \sum_{i=1}^\infty f(E_i) \qedhere
+        \end{align*}
+    \end{enumerate}
+\end{proof}

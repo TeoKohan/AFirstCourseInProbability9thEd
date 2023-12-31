@@ -1,0 +1,15 @@
+ \item Let $f_n$ denote the number of ways of tossing a coin $n$ times such that successive heads never appear. Argue that 
+ \[f_n = f_{n-1} + f_{n-2}\quad n \ge 2\]
+ where $f_0 = 1$, $f_1 = 2$.
+ 
+\emph{Hint:} How many outcomes are there that start with a head, and how many start with a tail? If $P_n$ denotes the probability that successive heads never appear when a coin is tossed $n$ times, find $P_n$ (in terms of $f_n$) when all possible outcomes of the $n$ tosses are assumed equally likely. Compute $P_{10}$.
+
+Trivialmente $f_0 = 1$ y $f_1 = 2$, inductivamente si $f_{k-2}$ y $f_{k-1}$ son la cantidad de resultados donde la moneda no sale cara más de una vez seguida en $k-2$ y $k-1$ tiros respectivamente luego
+
+si tiramos una moneda $k$ veces puede ocurrir que el primer tiro
+
+sea cara, en cuyo caso el siguiente tiro debe ser ceca y los $k-2$ restantes pueden formar cualquier secuencia tal que no salga cara más de una vez seguida ($f_{k-2}$) ó
+
+sea ceca en cuyo caso los $k-1$ restantes pueden formar cualquier secuencia tal que no salga cara más de una vez seguida ($f_{k-1}$).
+\[P_n = \frac{f_n}{2^n} \]
+y entonces $P_{10} = \frac{f_{10}}{2^{10}} = \frac{144}{2^{10}}$

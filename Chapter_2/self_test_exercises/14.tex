@@ -1,0 +1,17 @@
+\item  Prove \emph{Boole's inequality}
+\[ 
+P\Big( \bigcup_{i=1}^\infty A_i \Big) \le \sum_{i=1}^\infty P(A_i)
+\]
+
+\begin{proof}[Demostración] de la desigualdad de \emph{Boole}
+
+    Utilizando el ejercicio teórico 5 existe una secuencia de eventos $B_1, B_2, \dots$ de eventos disjuntos tal que para todo $n \ge 1$
+    \[ \bigcup_{i=1}^n A_i = \bigcup_{i=1}^n B_i \]
+    \begin{align*}
+        &\phantom{{}={}} P\Big( \bigcup_{i=1}^\infty A_i \Big)\\
+        &= P\Big( \bigcup_{i=1}^\infty B_i \Big)\\
+        &= \sum_{i=1}^\infty P(B_i)
+        \shortintertext{como $B_i \subseteq A_i$ para todo $i \in \N$}
+        &\le \sum_{i=1}^\infty P(A_i) \qedhere
+    \end{align*}
+\end{proof}

@@ -1,0 +1,10 @@
+\item In an experiment, die is rolled continually until a 6 appears, at which point the experiment stops. What is the sample space of this experiment? Let $E_n$ denote the event that $n$ rolls are necessary to complete the experiment. What points of the sample space are contained in $E_n$?
+
+What is $\displaystyle \left( \bigcup_1^\infty E_n \right)^c$?
+\begin{align*}
+    S &= \set{1,2,3,4,5,6}^\N\\
+    E_n &= \set{s \in S : s_i < 6, s_n = 6, i < n}
+    \shortintertext{$\displaystyle \left( \bigcup_1^\infty E_n \right)^c$ es el evento tal que}
+    \left( \bigcup_1^\infty E_n \right)^c &= \set{s \in S : \nexists i, s_i = 6}
+\end{align*}
+O sea tal que nunca se obtiene un 6.

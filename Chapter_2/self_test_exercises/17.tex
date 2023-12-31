@@ -1,0 +1,12 @@
+\item  Five balls are randomly chosen, without replacement, from an urn that contains 5 red, 6 white, and 7 blue balls.
+Find the probability that at least one ball of each color is chosen.
+
+Sea $A$ el evento donde elegimos aunque sea una bolilla roja, $B$ el evento donde elegimos aunque sea una bolilla blanca, $C$ el evento donde elegimos aunque sea una bolilla azul.
+\begin{align*}
+    &\phantom{{}={}} P(ABC)\\
+    &= 1 - P(A^c\cup B^c\cup C^c)\\
+    &= 1 - \Big( P(A^c) + P(B^c) + P(C^c) - {}\\
+    &\phantom{{}={}} P(A^cB^c) - P(A^cC^c) - P(B^cC^c) + P(A^c B^c C^c) \Big )\\
+    &= 1 - 
+    \frac{\binom{13}{5} + \binom{12}{5} + \binom{11}{5} - \binom{7}{5} - \binom{6}{5} - \binom{5}{5} + 0}{\binom{18}{5}}\\
+\end{align*}

@@ -1,0 +1,31 @@
+\item Consider Example 5o, which is concerned with the number of runs of wins obtained when $n$ wins and $m$ losses are randomly permuted. Now consider the total number of runs—that is, win runs plus loss runs—and show that
+\[ P(\{\text{2$k$ runs}\}) = 2 * \frac{\binom{m-1}{k-1} * \binom{n-1}{k-1}}{\binom{n+m}{n}} \]
+\begin{align*}
+    &\phantom{{}={}} P(\{\text{2$k$+1 runs}\}) 
+    \\
+    &= \frac{\binom{n-1}{k} * \binom{m-1}{k-1} + \binom{n-1}{k-1} * \binom{m-1}{k}}{\binom{n+m}{n}}
+\end{align*}
+
+Siguiendo el ejemplo 5o consideremos un vector de enteros positivos $x_1, \dots, x_k$ con $x_1 + \cdots + x_k = n$ donde la seguidilla de victorias $i$-ésima es de longitud $x_i$, $i = 1, \dots, k$.
+
+De manera similar consideremos otro vector de enteros positivos $y_1, \dots, y_k$ con $y_1 + \cdots + y_k = m$ donde la seguidilla de derrotas $i$-ésima es de longitud $y_i$, $i = 1, \dots, k$.
+
+Considerando la posibilidad de que la primer seguidilla sea de victorias o derrotas la cantidad de soluciones posibles es de 
+\[ 2 * \binom{n - 1 }{k - 1} * \binom{m - 1 }{k - 1} \]
+y entonces
+\[ P(\{\text{2$k$ runs}\}) = 2 * \frac{\binom{n - 1 }{k - 1} * \binom{m - 1 }{k - 1}}{\binom{n+m}{n}} \]
+
+Si ahora tenemos $2k+1$ seguidillas entonces puede ocurrir que
+
+la nueva seguidilla sea de victorias por lo tanto ahora tenemos $x_1, \dots, x_{k+1}$ con $x_1 + \cdots + x_{k+1} = n$. Entonces las soluciones posibles son
+\[ \binom{n - 1 }{k} * \binom{m - 1 }{k - 1} \]
+
+la nueva seguidilla sea de derrotas por lo tanto ahora tenemos $y_1, \dots, y_{k+1}$ con $y_1 + \cdots + y_{k+1} = m$. Entonces las soluciones posibles son
+\[ \binom{n - 1 }{k - 1} * \binom{m - 1 }{k} \]
+
+Combinando estos resultados tenemos que
+\begin{align*}
+    &\phantom{{}={}} P(\{\text{2$k$+1 runs}\}) 
+    \\
+    &= \frac{\binom{n-1}{k} * \binom{m-1}{k-1} + \binom{n-1}{k-1} * \binom{m-1}{k}}{\binom{n+m}{n}}
+\end{align*}

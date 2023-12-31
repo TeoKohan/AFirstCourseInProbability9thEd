@@ -1,0 +1,14 @@
+\item Seven balls are randomly withdrawn from an urn that contains 12 red, 16 blue, and 18 green balls. Find the probability that
+\begin{enumerate}
+    \item 3 red, 2 blue, and 2 green balls are withdrawn;
+    \[ \frac{\binom{12}{3} * \binom{16}{2} * \binom{18}{2}}{\binom{46}{7}} \]
+    \item at least 2 red balls are withdrawn;
+    \[ 1 - \frac{\binom{34}{7} + \binom{12}{1} * \binom{34}{6}}{\binom{46}{7}} \]
+    \item all withdrawn balls are the same color;
+    \[ \frac{\binom{12}{7}+\binom{16}{7}+\binom{18}{7}}{\binom{46}{7}} \]
+    \item either exactly 3 red balls or exactly 3 blue balls are withdrawn.
+    \begin{align*}
+        &\frac{\binom{12}{3} * \Big(\binom{18}{2}*\binom{16}{2}+\binom{18}{3}*\binom{16}{1}+\binom{18}{4}\Big)}{\binom{46}{7}} + {}\\
+        &\frac{\binom{16}{3} * \Big(\binom{18}{2}*\binom{12}{2}+\binom{18}{3}*\binom{12}{1}+\binom{18}{4}\Big)}{\binom{46}{7}}
+    \end{align*}
+\end{enumerate}

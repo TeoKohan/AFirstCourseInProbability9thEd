@@ -1,0 +1,27 @@
+\item An elementary school is offering 3 language classes: one in Spanish, one in French, and one in German. The classes are open to any of the 100 students in the school. There are 28 students in the Spanish class, 26 in the French class, and 16 in the German class. There are 12 students who are in both Spanish and French, 4 who are in both Spanish and German, and 6 who are in both French and German. In addition, there are 2 students taking all 3 classes.
+\begin{enumerate}
+    \item If a student is chosen randomly, what is the probability that he or she is not in any of the language classes?
+    \begin{align*}
+        &\phantom{\;=\;} P(S^cF^cG^c)\\
+        &= 1 - P(S\cup F \cup G)\\
+        &= 1 - \Big ( P(S) + P(F) + P(G) -\\
+        &\phantom{\;=\;} P(SF) - P(SG) - P(FG) + P(SFG) \Big )\\
+        &= 
+        1 - {}\\
+        &\phantom{\;=\;}
+        \left ( .28 + .26 + .16 - .12 - .04 - .06 + .02 \right )\\
+        &= 1 - .5\\
+        &= .5
+    \end{align*}
+    \item If a student is chosen randomly, what is the probability that he or she is taking exactly one language class?
+    \begin{align*}
+        &{\phantom{\; = \;}}1 - P(S^cF^cG^c) - {}\\
+        &\phantom{\;=\;} P(SFG^c) - P(SF^cG) - P(S^cFG) + {}\\
+        &\phantom{\;=\;} P(SFG) \\
+        &=1 - .5 - .12 - .04 - .06 + 2 * .02\\
+        &=1 - .68\\
+        &= .32
+    \end{align*}
+    \item If 2 students are chosen randomly, what is the probability that at least 1 is taking a language class?
+    \[ \frac{1}{2} + \frac{1}{2} * \frac{50}{99} \]
+\end{enumerate}

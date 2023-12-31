@@ -1,0 +1,13 @@
+\item Consider an experiment whose sample space consists of a countably infinite number of points. Show that not all points can be equally likely. Can all points have a positive probability of occurring?
+
+Supongamos que todos los puntos del espacio muestral son equiprobables, y definamos los eventos $E_i$, el punto $i$-ésimo en un ordenamiento de $S$. Por el axioma $2$
+\begin{align*}
+    1 &= P(S)
+    \shortintertext{como los eventos son puntuales son disjuntos}
+    &= \sum_{i=1}^\infty P(E_i)
+    \shortintertext{si suponemos que todos los puntos son equiprobables}
+    &= \lim_{n \to \infty} \sum_{i=1}^n c\\
+    &= c * \lim_{n \to \infty} n
+    \shortintertext{si $c = 0$ entonces $0 * \lim_{n \to \infty} n = 0 \ne 1$.}
+    \shortintertext{si $c > 0$ entonces $c * \lim_{n \to \infty} n$ es divergente.}
+\end{align*}

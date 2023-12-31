@@ -1,0 +1,12 @@
+\item If 4 married couples are arranged in a row, find the probability that no husband sits next to his wife.
+
+Sea $E_i$ el evento tal que exactamente $i$ parejas se sientan juntas, $i = 0,1,2,3,4$.
+\begin{align*}
+    &\phantom{{}={}} P(E_0)\\
+    &= 1 - P(E_1 \cup E_2 \cup E_3 \cup E_4)\\
+    &= 1 - \binom{4}{1} * \frac{2^1 * 7!}{8!} 
+    +  \binom{4}{2} * \frac{2^2 * 6!}{8!}\\
+    &\phantom{{}= 1} -
+       \binom{4}{3} * \frac{2^3 * 5!}{8!} 
+    +  \binom{4}{4} * \frac{2^4 * 4!}{8!}
+\end{align*}

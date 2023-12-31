@@ -1,0 +1,24 @@
+\item Compute the probability that a hand of 13 cards contains
+\begin{enumerate}
+    \item the ace and king of at least one suit.
+
+   Sea $E_i$ el evento tal que la mano contiene el as y el rey del palo $i$, $i = 1,2,3,4$.
+    \begin{align*}
+        &\phantom{{}={}} P(E_1\cup E_2\cup E_3\cup E_4)\\
+        &= \binom{4}{1} * \frac{\binom{50}{11}}{\binom{52}{13}}
+        -  \binom{4}{2} * \frac{\binom{48}{ 9}}{\binom{52}{13}} + {}\\
+        &\phantom{{}={}}
+           \binom{4}{3} * \frac{\binom{46}{ 7}}{\binom{52}{13}} -
+           \binom{4}{4} * \frac{\binom{44}{ 5}}{\binom{52}{13}}
+    \end{align*}
+    \item all 4 of at least 1 of the 13 denominations.
+
+    Sea $E_i$ el evento tal que la mano contiene las cuatro cartas numeradas $i$, $i = 1,2,\dots,13$.
+    \begin{align*}
+        &\phantom{{}={}} P(\textstyle \bigcup_{i=1}^{13} E_i)\\
+        &= \binom{13}{1} * \frac{\binom{48}{9}}{\binom{52}{13}}
+        -  \binom{13}{2} * \frac{\binom{44}{ 5}}{\binom{52}{13}} + {}\\
+        &\phantom{{}={}}
+           \binom{13}{3} * \frac{\binom{40}{ 1}}{\binom{52}{13}}
+    \end{align*}
+\end{enumerate}

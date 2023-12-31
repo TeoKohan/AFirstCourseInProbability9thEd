@@ -1,0 +1,7 @@
+\item Let $T_k(n)$ denote the number of partitions of the set $\{1, \dots, n\}$ into $k$ nonempty subsets, where $1 \le k \le n$. (See Theoretical Exercise 8 for the definition of a partition.) Argue that
+\[ T_k(n) = k * T_k(n - 1) + T_{k-1}(n - 1) \]
+\emph{Hint:} In how many partitions is $\{1\}$ a subset, and in how many is $1$ an element of a subset that contains other elements?
+
+Si $\{n\}$ es un subconjunto de la partición entonces basta agregar el subconjunto a cada partición en $k-1$ subconjuntos de $n-1$.
+
+Si $\{n\}$ no es un subconjunto de la partición entonces basta agregar $n$ a alguno de los $k$ subconjuntos de la partición en $k$ subconjuntos de $n-1$.

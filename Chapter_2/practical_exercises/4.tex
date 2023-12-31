@@ -1,0 +1,23 @@
+\item $A$, $B$, and $C$ take turns flipping a coin. The first one to get a head wins. The sample space of this experiment can be defined by
+\[ S = \begin{cases}
+    1, 01, 001, 0001, \dots,\\
+    0000\cdots
+\end{cases} \]
+\begin{enumerate}
+    \item Interpret the sample space.
+    
+    Es el conjunto de secuencias formadas por 0 y 1, donde el $i$-ésimo componente representa el resultado de la tirada $i$-ésima, con 0 representando que el resultado es ceca y 1 representando que el resultado es cara. 
+    
+    \item Define the following events in terms of $S$, assuming that $A$ flips first, then $B$, then $C$, $\dots$
+    \begin{enumerate}[label={\alph*.}]
+        \item $A \text{ wins} = A.$
+        \[ A = \set{ 1, 0001, 0000001, \dots } \]
+        \item $B \text{ wins} = B.$
+        \[ A = \set{ 01, 00001, 00000001, \dots } \]
+        \item $(A \cup B)^c$
+        \[ (A \cup B)^c = \begin{cases}
+            &001, 000001, \dots\\
+            &0000\cdots
+        \end{cases} \]
+    \end{enumerate}
+\end{enumerate}

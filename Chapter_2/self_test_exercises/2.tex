@@ -1,0 +1,31 @@
+\item A customer visiting the suit department of a certain store will purchase a suit with probability $.22$, a shirt with probability $.30$, and a tie with probability $.28$. The customer will purchase both a suit and a shirt with probability $.11$, both a suit and a tie with probability $.14$, and both a shirt and a tie with probability $.10$. A customer will purchase all 3 items with probability $.06$. What is theprobability that a customer purchases
+\begin{enumerate}
+    \item none of these items?
+
+    Sean $A$, $B$, $C$ los eventos tales que el cliente compra el traje, la remera o una corbata respectivamente entonces buscamos $P(A^c B^c C^c)$.
+    \begin{align*}
+        &\phantom{{}={}} P(A^c B^c C^c)\\
+        &= 1 - P((A^c B^c C^c)^c)\\
+        &= 1 - P(A \cup B \cup C)\\
+        &= 1 - \Big ( P(A) + P(B) + P(C) - {}\\
+        &\phantom{{}={}} P(A B) -
+        P(A C) -
+        P(B C) + P(A B C) \Big )\\
+        &= 1 - ( .22 + .3 + .28 - .11 - .14 - .10 + .06 )\\
+        &= .49
+    \end{align*}
+    
+    \item exactly 1 of these items?
+    \begin{align*}
+        &\phantom{{}={}} P(\{\text{exactamente 1 item}\})\\
+        &= 1 - \sum_{i\in\{0,2,3\}} P(\{\text{exactamente $i$ items}\})\\
+        &= 1 - \big( .49 + P(\{\text{exactamente 2 items}\}) + .06 \big)\\
+        &= .45 - P(\{\text{exactamente 2 items}\})\\
+        &= .45 - \big ( P(ABC^c \cup AB^cC \cup A^cBC) \big )\\
+        &= .45 - \big ( P(ABC^c) + P(AB^cC) + P(A^cBC) \big )\\
+        &= .45 - P(AB) - P(AC) - P(BC) + {}\\
+        &\phantom{{}={}} 3 * P(ABC)\\
+        &= .45 - .11 - .14 - .10 + 3 * .06\\
+        &= .28
+    \end{align*}
+\end{enumerate}

@@ -1,0 +1,12 @@
+\item An urn contains $n$ white and $m$ black balls, where $n$ and $m$ are positive numbers.
+\begin{enumerate}
+    \item If two balls are randomly withdrawn, what is the probability that they are the same color?
+    \[ \frac{\binom{n}{2} + \binom{m}{2}}{\binom{n+m}{2}} \]
+    
+    \item If a ball is randomly withdrawn and then replaced before the second one is drawn, what is the probability that the withdrawn balls are the same color?
+    \[ \frac{n^2 + m^2}{(n+m)^2} \]
+    
+    \item Show that the probability in part ii. is always larger than the one in part i.
+
+    i.\@ la probabilidad de seleccionar otra del mismo color es de $\frac{n-1}{n+m}$ o $\frac{m-1}{n+m}$ mientras que en ii.\@ la probabilidad es de $\frac{n}{n+m}$ o $\frac{m}{n+m}$.
+\end{enumerate}

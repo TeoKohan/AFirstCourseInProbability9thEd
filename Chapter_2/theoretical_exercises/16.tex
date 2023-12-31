@@ -1,0 +1,23 @@
+\item Use induction to generalize \emph{Bonferroni's inequality} to $n$ events. Thats is show that
+\[ P(E_1 E_2\cdots E_n) \ge P(E_1) + \cdots + P(E_n) - (n-1) \]
+
+\begin{proof}[Demostración] de la generalización de la desigualdad de \emph{Bonferroni}.
+
+    Por inducción, $P(E_1 E_2) \ge P(E_1) + P(E_2) - 1$ por la desigualdad de \emph{Bonferroni}.
+
+    Si 
+    \begin{align*}
+        &\phantom{{}={}} P(E_1 E_2\cdots E_k)\\
+        &\ge P(E_1) + \cdots + P(E_k) - (k-1)
+    \end{align*} entonces
+    \begin{align*}
+        &\phantom{{}={}} P(E_1 E_2\cdots E_{k+1})\\
+        &= P(E_1 (E_2\cdots E_{k+1}))
+        \shortintertext{por la desigualdad de \emph{Bonferroni}}
+        &= P(E_1) + P(E_2\cdots E_{k+1}) - 1
+        \shortintertext{por hipótesis inductiva}
+        &= P(E_1) + {}\\
+        &\phantom{{}={}} (P(E_2) + \cdots P(E_{k+1}) - (k-1)) - 1\\
+        &= P(E_1) + \cdots + P(E_{k+1}) - k \qedhere
+    \end{align*}
+\end{proof}

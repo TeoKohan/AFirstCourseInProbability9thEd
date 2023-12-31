@@ -1,0 +1,12 @@
+\item  The following data were given in a study of a group of 1000 subscribers to a certain magazine: In reference to job, marital status, and education, there were 312 professionals, 470 married persons, 525 college graduates, 42 professional college graduates, 147 married college graduates, 86 married professionals, and 25 married professional college graduates. Show that the numbers reported in the study must be incorrect.
+
+Sea $P$/$M$/$G$ el evento tal que la persona es profesional/casado/graduado.
+\begin{align*}
+    &\phantom{\;=\;} P(P\cup M\cup C)\\
+    &= P(P) + P(M) + P(C) - {} \\
+    &\phantom{\;=\;} P(PM) - P(PC) - P(MC) + P(PMC)\\
+    &= \tfrac{312}{1000} + \tfrac{470}{1000} + \tfrac{525}{1000} - {}\\
+    &\phantom{\;=\;} \tfrac{86}{1000} - \tfrac{42}{1000} - \tfrac{147}{1000} + \tfrac{25}{1000}\\
+    &= \tfrac{1057}{1000}
+\end{align*}
+Que contradice uno de los axiomas de la probabilidad $P(E) \le 1$ para todo evento $E$.

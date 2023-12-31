@@ -1,0 +1,27 @@
+\item $\left( \bigcup_{i=1}^\infty E_i \right) F = \bigcup_{i=1}^\infty (E_i F)$ y\\
+$\left( \bigcap_{i=1}^\infty E_i \right) \cup F = \bigcap_{i=1}^\infty (E_i \cup F)$.
+
+\begin{proof}[Demostración]\ \\$\left( \bigcup_{i=1}^\infty E_i \right) F = \bigcup_{i=1}^\infty (E_i F)$.
+    \begin{itemize}
+        \item[$\subset$] Si $x \in \left( \bigcup_{i=1}^\infty E_i \right) F$ entonces $x \in \bigcup_{i=1}^\infty E_i$ y $x \in F$. Como $x \in \bigcup_{i=1}^\infty E_i$ entonces $x \in E_k$ para algún $k$. Luego como $x \in E_k$ y $x \in F$ entonces $x \in E_k F$ por lo tanto $x \in \bigcup_{i=1}^\infty (E_i F)$.
+        \item[$\supset$] Si $x \in \bigcup_{i=1}^\infty (E_i F)$ entonces $x \in E_k F$ para algún $k$. Luego como $x \in E_k F$ entonces $x \in E_k$ y $x \in F$. Como $x \in E_k$ entonces $x \in \bigcup_{i=1}^\infty E_i$. Como $x \in \bigcup_{i=1}^\infty E_i$ y $x \in F$ entonces $x \in \left( \bigcup_{i=1}^\infty E_i \right) F$. \qedhere
+    \end{itemize}
+\end{proof}
+
+\begin{proof}[Demostración]\ \\
+$\left( \bigcap_{i=1}^\infty E_i \right) \cup F = \bigcap_{i=1}^\infty (E_i \cup F)$.
+
+    \begin{itemize}
+        \item[$\subset$] Si $x \in \left( \bigcap_{i=1}^\infty E_i \right) \cup F$ entonces ó $x \in \bigcap_{i=1}^\infty E_i$ ó $x \in F$. 
+
+        Si $x \in \bigcap_{i=1}^\infty E_i$ entonces $x \in E_k$ para todo $k \in \N$ y $x \in E_k \cup F$ para todo $k \in \N$ por lo tanto $x \in \bigcap_{i=1}^\infty (E_i \cup F)$.
+
+        Si $x \in F$ entonces $x \in E_k \cup F$ para todo $k \in \N$ por lo tanto $x \in \bigcap_{i=1}^\infty (E_i \cup F)$.
+        
+        \item[$\supset$] Si $x \in \bigcap_{i=1}^\infty (E_i \cup F)$ entonces $x \in E_k \cup F$ para todo $k$ por lo tanto $x \in E_k$ para todo $k$ ó $x \in F$. 
+
+        Si $x \in F$ entonces $x \in \left( \bigcap_{i=1}^\infty E_i \right) \cup F$.
+        
+        Si $x \in E_k$ para todo $k$ entonces $x \in \bigcap_{i=1}^\infty E_i$ por lo tanto $x \in \left( \bigcap_{i=1}^\infty E_i \right) \cup F$. \qedhere
+    \end{itemize}
+\end{proof}

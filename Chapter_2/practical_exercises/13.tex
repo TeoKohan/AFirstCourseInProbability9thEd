@@ -1,0 +1,65 @@
+\item A certain town with a population of 100000 has 3 newspapers: I, II, and III. The proportions of townspeople who read these papers are as follows
+\[ 
+\begin{tabular}{cccc}
+     & and I & and II & and III \\
+    I & 10\% & 8\% & 2\% \\
+    II & 8\% & 30\% & 4\%\\
+    III & 2\% & 4\% & 5\%
+\end{tabular}
+\]
+and 1\% read I, II and III.
+\begin{enumerate}
+    \item Find the number of people who read only one newspaper.
+
+    Sea $E_{i}$ el evento tal que una persona lee exactamente $i$ periódicos
+    \begin{align*}
+        &\phantom{\;=\;}P(E_1)\\
+        &= P(\text{I}) + P(\text{II}) + P(\text{III}) - {}\\
+        &\phantom{\;=\;} 2 * P(\text{I}\ \text{II}) - 2 * P(\text{I}\ \text{III}) - 2 * P(\text{II}\ \text{III}) +{}\\
+        &\phantom{\;=\;} 3 * P(\text{I}\ \text{II}\ \text{III})\\
+        &= .1 + .3 + .05 - {}\\
+        &\phantom{\;=\;} 2 * .08 - 2 * .02 - 2 * .04 + {}\\
+        &\phantom{\;=\;}3 * .01\\
+        &= .2
+    \end{align*}
+    \[ .2 * 100000 = 20000 \]
+    \item How many people read at least two newspapers?
+    \begin{align*}
+        &\phantom{\;=\;} P(E_2\cup E_3)\\
+        &= P(\text{I}\ \text{II}) + P(\text{I}\ \text{III}) + P(\text{II}\ \text{III}) - {}\\
+        &\phantom{\;=\;} 2 * P(\text{I}\ \text{II}\ \text{III})\\
+        &= .08 + .02 + .04 - 2 * .01\\
+        &= .12
+    \end{align*}
+    \[ .12 * 100000 = 12000 \]
+    \item If I and III are morning papers and II is an evening paper, how many people read at least one morning paper plus an evening paper?
+    \begin{align*}
+        &\phantom{\;=\;} P((\text{I}\ \text{II})\cup(\text{III}\ \text{II}))\\
+        &= P(\text{I}\ \text{II})+P(\text{III}\ \text{II})- {}\\
+        &\phantom{\;=\;} P((\text{I}\ \text{II})\cap(\text{III}\ \text{II}))\\
+        &= P(\text{I}\ \text{II})+P(\text{III}\ \text{II})- P(\text{I}\ \text{II}\ \text{III})\\
+        &= .08 + .04 - .01\\
+        &= .11
+    \end{align*}
+    \[ .11 * 100000 = 11000 \]
+    \item How many people do not read any newspapers?
+    \begin{align*}
+        &\phantom{\;=\;} P(E_0)\\
+        &= 1 - P(E_1) - P(E_2) - P(E_3)\\
+        &= 1 - P(E_1) - P(E_2\cup E_3)\\
+        &= 1 - .2 - .12\\
+        &= .68
+    \end{align*}
+    \[ .68 * 100000 = 68000 \]
+    \item How many people read only one morning paper and one evening paper?
+    \begin{align*}
+        &\phantom{\;=\;} P((\text{I}\ \text{II}\ \text{III}^c)\cup(\text{I}^c\ \text{II}\ \text{III}))\\
+        &=
+        P(\text{I}\ \text{II}\ \text{III}^c) + P(\text{I}^c\ \text{II}\ \text{III})\\
+        &= P(\text{I}\ \text{II}) - P(\text{I}\ \text{II}\ \text{III}) + {}\\
+        &\phantom{\;=\;} P(\text{II}\ \text{III}) - P(\text{I}\ \text{II}\ \text{III})\\
+        &= .08 - .01 + .04 - .01\\
+        &= .1
+    \end{align*}
+    \[ .1 * 100000 = 10000 \]
+\end{enumerate}

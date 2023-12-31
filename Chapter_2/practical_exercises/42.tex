@@ -1,0 +1,6 @@
+\item  Two dice are thrown $n$ times in succession. Compute the probability that double 6 appears at least once. How large need $n$ be to make this probability at least $\frac{1}{2}$?
+\begin{align*}
+    &1 - P(\{\text{no doble 6 en $n$ tiros}\})\\
+    &1 - (\tfrac{35}{36})^n
+\end{align*}
+La probabilidad es mayor a $\tfrac{1}{2}$ cuando $(\tfrac{35}{36})^n$ sea menor a $\tfrac{1}{2}$. Esto sucede cuando $n \ge 25$.

@@ -1,0 +1,29 @@
+\item Prove Proposition 4.4 by mathematical induction.
+\begin{proof}[Demostración] de la Proposición 4.4
+
+    Por inducción en $n$
+    
+    Trivialmente para $n = 2$
+    \[ P(E_1 \cup E_2) = P(E_1) + P(E_2) - P(E_1 E_2) \]
+    Si para $k$ ocurre que
+    \begin{align*}
+        &\phantom{{}={}} P(E_1 \cup E_2 \cup \cdots \cup E_k)\\
+        &= \sum_{r=1}^k (-1)^{r+1} \sum_{i_1<i_2<\cdots<i_r} P(\bigcap_{j=1}^r E_{i_j})
+        \shortintertext{entonces}
+        &\phantom{{}={}} P(E_1 \cup E_2 \cup \cdots \cup E_{k+1})\\
+        &= P((E_1 \cup E_2 \cup \cdots \cup E_k) \cup E_{k+1})
+        \shortintertext{por el caso base tenemos que}
+        &= P(E_1 \cup E_2 \cup \cdots \cup E_k) + P(E_{k+1}) - {}\\
+        &\phantom{{}={}} P((E_1 \cup E_2 \cup \cdots \cup E_k) E_{k+1})\\
+        &= P(E_1 \cup E_2 \cup \cdots \cup E_k) + P(E_{k+1}) - {}\\
+        &\phantom{{}={}} P(E_1E_{k+1}  \cup E_2E_{k+1} \cup \cdots \cup E_kE_{k+1})
+        \shortintertext{por hipótesis inductiva}
+        &= \sum_{r=1}^k (-1)^{r+1} \sum_{i_1<i_2<\cdots<i_r} P(\bigcap_{j=1}^r E_{i_j}) + {}\\
+        &\phantom{{}={}} P(E_{k+1}) - {}\\
+        &\phantom{{}={}} \sum_{r=1}^{k} (-1)^{r+1} \sum_{i_1<i_2<\cdots<i_r} P(\bigcap_{j=1}^r E_{i_j} E_{k+1})\\
+        &= \sum_{r=1}^k (-1)^{r+1} \sum_{i_1<i_2<\cdots<i_r} P(\bigcap_{j=1}^r E_{i_j}) + {}\\
+        &\phantom{{}={}} P(E_{k+1}) - {}\\
+        &\phantom{{}={}} \sum_{r=1}^{k} (-1)^{r+1} \sum_{i_1<i_2<\cdots<i_r} P(E_{k+1} \bigcap_{j=1}^r E_{i_j})\\
+        &= \sum_{r=1}^{k+1} (-1)^{r+1} \sum_{i_1<i_2<\cdots<i_r} P(\bigcap_{j=1}^r E_{i_j}) \qedhere
+    \end{align*}
+\end{proof}

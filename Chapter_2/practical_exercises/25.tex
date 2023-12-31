@@ -1,0 +1,22 @@
+\item A pair of dice is rolled until a sum of either 5 or 7 appears. Find the probability that a 5 occurs first. 
+
+\emph{Hint}: Let $E_n$ denote the event that a 5 occurs on the $n$th roll and no 5 or 7 occurs on the first $n - 1$ rolls. Compute $P(E_n)$ and argue that $\sum_{n=1}^\infty P(E_n)$ is the desired probability.
+
+\begin{align*}
+    &\phantom{{}={}} P(E_n)\\
+    &= P(\{\text{no suma 5 o 7 en $n-1$ tiros}\}) * {}\\
+    &\phantom{{}={}} P(\{\text{suma 5 o 7}\})\\
+    &= \big(1 - P(\{\text{sumar 5 o 7}\})\big)^{n-1} *\\
+    &\phantom{{}={}} P(\{\text{sumar 5 o 7}\})\\
+    &= \bigg(\frac{26}{6^2}\bigg)^{n-1} * \frac{4}{6^2}
+\shortintertext{entonces}
+    &\phantom{{}={}} \sum_{i=1}^\infty P(E_n)\\
+    &= \sum_{i=0}^\infty \bigg(\frac{26}{6^2}\bigg)^i * \frac{4}{6^2}\\
+    &= \lim_{n\to\infty} \sum_{i=0}^n \bigg(\frac{26}{6^2}\bigg)^i * \frac{4}{6^2}\\
+    &= \frac{4}{6^2} * \lim_{n\to\infty} \sum_{i=0}^n 
+    \frac{26^i}{36^i}
+    \shortintertext{por formula cerrada de serie geométrica}
+    &= \frac{4}{6^2} * \lim_{n\to\infty} \frac{1 - (\frac{26}{36})^{n+1}}{1-\frac{26}{36}}\\
+    &= \frac{4}{6^2} * \frac{1}{\frac{10}{36}}\\
+    &= \frac{2}{5}
+\end{align*}

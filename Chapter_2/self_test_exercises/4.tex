@@ -1,0 +1,18 @@
+\item Let $A$ denote the event that the midtown temperature in Los Angeles is $70^\circ$F, and let $B$ denote the event that the midtown temperature in New York is $70^\circ$F. Also, let $C$ denote the event that the maximum of the midtown temperatures in New York and in Los Angeles is $70^\circ$F. If $P(A) = .3$, $P(B) = .4$, and $P(C) = .2$, find the probability that the minimum of the two midtown temperatures is $70^\circ$F.
+
+Sea $D$ el evento tal que la temperatura mínima de ambas ciudades sea $70^\circ$F.
+\begin{align*}
+    &\phantom{{}={}} P(A\cup B)\\
+    &= P(A) + P(B) - P(AB)\\
+    &= .3 + .4 - P(AB)
+    \shortintertext{por otro lado}
+    &\phantom{{}={}} P(C\cup D)\\
+    &= P(C) + P(D) - P(CD)\\
+    &= .2 + P(D) - P(CD)
+    \shortintertext{donde $C\cup D$ es el evento donde $70^\circ$F es el máximo o mínimo, que coincide con $A\cup B$ el evento donde alguna temperatura es $70^\circ$F. Similarmente $CD$ el evento donde $70^\circ$F es la máxima y mínima temperatura coincide con $AB$ el evento donde ambas temperaturas son $70^\circ$F. Si restamos $P(C \cup D)$ a $P(A\cup B)$}
+    &\phantom{{}={}} 0\\
+    &= P(A\cup B) - P(C\cup D)\\
+    &= .7 - P(AB) - \big ( .2 + P(D) - P(CD) \big )\\
+    &= .5 - P(D)
+\end{align*}
+Por lo tanto $P(D) = .5$

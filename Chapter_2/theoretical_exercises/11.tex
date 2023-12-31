@@ -1,0 +1,9 @@
+\item If $P(E) = .9$ and $P(F) = .8$, show that $P(EF) \ge .7$. In general, prove \emph{Bonferroni's inequality}, namely,
+\[ P(EF) \ge P(E) + P(F) - 1 \]
+\begin{proof}[Demostración] de la \emph{desigualdad de Bonferroni}.
+    \begin{align*}
+        P(EF) &= P(E) + P(F) - P(E\cup F)
+        \shortintertext{por axioma 1.\@ $P(E\cup F) \le 1$}
+        &\ge P(E) + P(F) - 1 \qedhere
+    \end{align*}
+\end{proof}

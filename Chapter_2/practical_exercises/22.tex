@@ -1,0 +1,10 @@
+\item Consider the following technique for shuffling a deck of $n$ cards: For any initial ordering of the cards, go through the deck one card at a time and at each card, flip a fair coin. If the coin comes up heads, then leave the card where it is; if the coin comes up tails, then move that card to the end of the deck. After the coin has been flipped $n$ times, say that one round has been completed. For instance, if $n = 4$ and the initial ordering is 1, 2, 3, 4, then if the successive flips result in the outcome h, t, t, h, then the ordering at the end of the round is 1,4,2,3. Assuming that all possible outcomes of the sequence of $n$ coin flips are equally likely, what is the probability that the ordering after one round is the same as the initial ordering?
+
+Si $n = 1$ hay dos tiradas posibles.
+
+Inductivamente, si para $k$ cartas hay $k+1$ tiradas que dejan las cartas en su orden inicial.
+
+Para $k+1$ cartas, si la primer tirada es ceca, todas las subsecuentes tiradas deben ser ceca. Si la primer tirada es cara hay $k+1$ tiradas que mantienen el orden de las siguientes $k$ cartas. Por lo tanto hay $k+2$ posibles tiradas que mantienen las cartas en su orden inicial.
+
+Por lo tanto la probabilidad de dejar un mazo de $n$ cartas en su orden inicial
+\[ \frac{n+1}{2^n} \]

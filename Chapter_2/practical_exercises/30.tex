@@ -1,0 +1,9 @@
+\item The chess clubs of two schools consist of, respectively, 8 and 9 players. Four members from each club are randomly chosen to participate in a contest between the two schools. The chosen players from one team are then randomly paired with those from the other team, and each pairing plays a game of chess. Suppose that Rebecca and her sister Elise are on the chess clubs at different schools. What is the probability that
+\begin{enumerate}
+    \item Rebecca and Elise will be paired?
+    \[ \frac{\binom{7}{3} * \binom{8}{3} * 3!}{\binom{8}{4} * \binom{9}{4} * 4!} \]
+    \item Rebecca and Elise will be chosen to represent their schools but will not play each other?
+    \[ \frac{\binom{7}{3} * \binom{8}{3} * (4! - 3!)}{\binom{8}{4} * \binom{9}{4} * 4!} \]
+    \item either Rebecca or Elise will be chosen to represent her school?
+    \[ \frac{\binom{7}{3} * \binom{8}{4} + \binom{7}{4} * \binom{8}{3}}{\binom{8}{4} * \binom{9}{4}}\]
+\end{enumerate}

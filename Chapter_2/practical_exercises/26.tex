@@ -1,0 +1,61 @@
+\item The game of craps is played as follows: A player rolls two dice. If the sum of the dice is either a 2, 3, or 12, the player loses; if the sum is either a 7 or an 11, the player wins. If the outcome is anything else, the player continues to roll the dice until she rolls either the initial outcome or a 7. If the 7 comes first, the player loses, whereas if the initial outcome reoccurs before the 7 appears, the player wins. Compute the probability of a player winning at craps.
+
+\emph{Hint}: Let $E_i$ denote the event that the initial outcome is $i$ and the player wins. The desired probability is $\sum_{i=2}^{12} P(E_i)$. To compute $P(E_i)$, define the events $E_{i,n}$ to be the event that the initial sum is $i$ and the player wins on the $n$th roll.
+Argue that $P(E_i) = \sum_{n=1}^\infty P(E_{i,n})$.
+
+$P(E_i) = 0$ para $i=2,3,12$.
+
+$P(E_7) = \frac{6}{36}$ y $P(E_{11}) = \frac{2}{36}$.
+
+Para $i=4,5,6,8,9,10$
+\[ P(E_i) = \sum_{n=1}^\infty P(E_{i,n}). \]
+
+%k = (30 - \#(k^+))/36)
+%S = k^0 + k + ... + k^n
+%k * S = k + k^2 + ... + k^{n+1}
+%S - k * S = k^0 - k^{n+1}
+%S = (1 - k^{n+1})/(1 - k)
+
+Sea $P(k^+)$ la probabilidad de sumar $k$ para $k=2,3,\dots,11,12$
+\begin{align*}
+    &\phantom{{}={}} P(E_{k,n})\\
+    &= P(k^+) * {}\\
+    &\phantom{{}={}} P(\{ \text{no suma $k$ o $7$ en $n-2$ tiros} \}) * {}\\
+    &\phantom{{}={}} P(k^+)\\
+    &= P(k^+)^2 * \big(1 - P(k^+\cup 7^+)\big)^{n-2}\\
+    &= P(k^+)^2 * \big(1 - P(k^+) - P(7^+)\big)^{n-2}\\
+    &= \Big(\frac{\#(k^+)}{36}\Big)^2 *\Big(1 - \frac{\#(k^+)}{36} - \frac{6}{36} \Big)^{n-2}\\
+    &= \Big(\frac{\#(k^+)}{36}\Big)^2 * \Big(\frac{30 - \#(k^+)}{36}\Big)^{n-2}
+    \shortintertext{entonces}
+    &\phantom{{}={}} P(E_{k})\\
+    &= \sum_{i=0}^\infty P(E_{k, i})\\
+    &= \sum_{i=0}^\infty \Big(\frac{\#(k^+)}{36}\Big)^2 * \Big(\frac{30 - \#(k^+)}{36}\Big)^{i}\\
+    &= \lim_{n\to\infty}\sum_{i=0}^n \Big(\frac{\#(k^+)}{36}\Big)^2 * \Big(\frac{30 - \#(k^+)}{36}\Big)^{i} 
+    \shortintertext{por formula cerrada de serie geométrica}
+    &= \Big(\frac{\#(k^+)}{36}\Big)^2 * \lim_{n\to\infty} 
+    \frac
+    {1 - \big(\frac{30 - \#(k^+)}{36}\big)^{n+1}}
+    {1 - \frac{30 - \#(k^+)}{36}}
+    \shortintertext{Como $\frac{36 - \#(k^+) - \#(7^+)}{36} < 1$}
+    &= \Big(\frac{\#(k^+)}{36}\Big)^2 *
+    \frac
+    {1}
+    {\frac{36 - (30 - \#(k^+))}{36}}\\
+    &= \frac{\#(k^+)}{36} * \frac{\#(k^+)}{6 + \#(k^+)}
+\end{align*}
+Por lo tanto
+\begin{alignat*}{2}
+    P(E_4) &= \frac{3}{36} * \frac{3}{\;9\;} \quad
+    P(E_5) &&= \frac{4}{36} * \frac{4}{10}\\
+    P(E_6) &= \frac{5}{36} * \frac{5}{11}\quad
+    P(E_8) &&= \frac{5}{36} * \frac{5}{11}\\
+    P(E_9) &= \frac{4}{36} * \frac{4}{10} \quad
+    P(E_{10}) &&= \frac{3}{36} * \frac{3}{9}
+\end{alignat*}
+Luego la probabilidad buscada es
+\begin{align*}
+    &\phantom{{}={}} \sum_{i=2}^{12} P(E_i)\\
+    &= \frac{1}{36} * \Big(0+0+\frac{9}{9}+\frac{16}{10}+{}\\
+    &\phantom{{}={}} \frac{25}{11}+6+\frac{25}{11}+\frac{16}{10}+\frac{9}{9}+2+0\Big)\\
+    &\approx .4\overline{92}
+\end{align*}

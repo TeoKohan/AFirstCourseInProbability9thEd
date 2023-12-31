@@ -1,0 +1,15 @@
+\item An urn contains 5 red, 6 blue, and 8 green balls. If a set of 3 balls is randomly selected, what is the probability that each of the balls will be i. of the same color? ii. of different colors? Repeat under the assumption that whenever a ball is selected, its color is noted and it is then replaced in the urn before the next selection. This is known as \emph{sampling with replacement}.
+\begin{enumerate}
+    \item
+    \begin{align*}
+        P(\{\text{iguales}\}) &= \frac{\binom{5}{3} + \binom{6}{3} + \binom{8}{3}}{\binom{19}{3}}
+        \shortintertext{con reemplazo}
+        P(\{\text{iguales}\}) &= \frac{5^3 + 6^3 + 8^3}{19^3}
+    \end{align*}
+    \item 
+    \begin{align*}
+        P(\{\text{distintas}\}) &= \frac{\binom{5}{1} * \binom{6}{1} * \binom{8}{1}}{\binom{19}{3}}
+        \shortintertext{con reemplazo}
+        P(\{\text{distintas}\}) &= 6 * \frac{5 * 6 * 8}{19^3}
+    \end{align*}
+\end{enumerate}
