@@ -1,0 +1,13 @@
+\item Give an analytic verification of
+\[ \binom{n}{2} = \binom{k}{2} + k*(n-k) + \binom{n-k}{2}\quad 1 \le k \le n\]
+\begin{align*}
+    &\phantom{{}={}} \binom{k}{2} + k*(n-k) + \binom{n-k}{2}\\
+    &= \frac{k!}{2!*(k-2)!} + k*(n-k) + \frac{(n-k)!}{2!*(n-k-2)!}\\
+    &= \frac{k^2 - k + n^2 - 2nk + k^2 -n + k + 2kn-k^2}{2}\\
+    &= \frac{n^2 - n}{2}\\
+    &= \binom{n}{2}
+\end{align*}
+
+Now, give a combinatorial argument for this identity.
+
+Suma de las formas de elegir 2 entre los $k$ primeros, 1 entre los $k$ primeros y 1 entre los $n-k$ últimos y 2 entre los $n-k$ últimos,

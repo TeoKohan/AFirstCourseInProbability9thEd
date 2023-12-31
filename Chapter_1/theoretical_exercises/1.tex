@@ -1,0 +1,17 @@
+\item Prove the generalized version of the basic counting principle.
+\begin{proof}[Demostración] De la versión generalizada del principio de conteo básico.
+
+    Sea
+    \[
+        P(r) \coloneqq \begin{aligned}[t]
+            &\text{La versión generalizada del principio}\\
+            &\text{de conteo básico es verdadera}\\
+            &\text{para $r$ experimentos.}
+        \end{aligned}
+    \]
+    $P(2)$ es verdadero ya que es equivale al principio de conteo básico.
+
+    Sea $P(k)$ verdadera y sean $k+1$ experimentos a ser realizados tales que el primero tiene $n_1$ resultados posibles; y para cada uno de estos $n_1$ resultados posibles hay $n_2$ posibles resultados para el segundo experimento; y para cada uno de los posibles resultados de los dos primeros experimentos hay $n_3$ posibles resultados para el tercer experimento; $\dots$ entonces es claro por $P(k)$ que los primeros $k$ experimentos tienen $n_1 * n_2 \cdots n_k$ posibles resultados.
+
+    Dado que el experimento $k+1$-ésimo tiene $n_{k+1}$ resultados para todos los posibles resultados de los experimentos 1 a $k$ entonces por el principio básico de conteo este experimento tiene $(n_1 * n_2 \cdots n_k) * n_{k+1}$ posibles resultados. \qedhere
+\end{proof}

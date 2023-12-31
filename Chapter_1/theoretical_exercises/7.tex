@@ -1,0 +1,10 @@
+\item Give an analytic proof of
+\[ \binom{n}{r} = \binom{n-1}{r-1} + \binom{n-1}{r} \]
+\begin{proof}[Demostración] inductivamente en $n$.
+    \begin{align*}
+    &\phantom{{}={}} \binom{n-1}{r-1} + \binom{n-1}{r}\\
+    &= \frac{(n-1)!}{(r-1)! * (n-r)!} + \frac{(n-1)!}{r! * (n-1-r)!}\\
+    &= \frac{n!}{r! * (n-r)!} * \Big( \frac{r}{n} + \frac{n - r}{n} \Big)\\
+    &= \binom{n}{r} \qedhere
+\end{align*}
+\end{proof}

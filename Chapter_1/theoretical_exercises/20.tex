@@ -1,0 +1,6 @@
+\item In how many ways can $n$ identical balls be distributed into $r$ urns so that the $i$th urn contains at least $m_i$ balls for each $i = 1,\dots,r$? Assume that $n \ge \sum_{i=1}^r m_i$.
+
+Primero colocamos las bolillas requeridas en las urnas, y nos restan $n - \sum_{i=1}^r m_i$ bolillas.
+
+Luego debemos colocar las $n - \sum_{i=1}^r m_i$ bolillas restantes en las $r$ urnas
+\[ \binom{ n + r - 1 - \sum_{i=1}^r m_i}{r-1} \]

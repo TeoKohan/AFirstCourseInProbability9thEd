@@ -1,0 +1,34 @@
+\item From a set of $n$ people, a committee of size $j$ is to be chosen, and from this committee, a subcommittee of size $i$, $i \le j$ is also to be chosen.
+\begin{enumerate}
+    \item Derive a combinatorial identity by computing, in two ways, the number of possible choices of the committee and subcommittee—first by supposing that the committee is chosen first and then the subcommittee is chosen, and second by supposing that the subcommittee is chosen first and then the remaining members of the committee are chosen.
+    
+    Supongamos que primero seleccionamos el comité, hay $\displaystyle \binom{n}{j}$ posibles comités, y de estas $j$ personas debemos seleccionar $i$ para que formen parte del subcomité
+    \[ \binom{n}{j} * \binom{j}{i} \]
+
+    Supongamos que primero seleccionamos el subcomité, hay $\displaystyle \binom{n}{i}$ posibles subcomités, luego de las restantes $n-i$ personas debemos seleccionar $j-i$
+    \[ \binom{n}{i} * \binom{n-i}{j-i} \]
+
+    Finalmente concluimos que
+    \[ \binom{n}{j} * \binom{j}{i} = \binom{n}{i} * \binom{n-i}{j-i} \]
+
+    \item Use part i. to prove the following combinatorial identity:
+    \[ \sum_{j=i}^n \binom{n}{j} \binom{j}{i} = \binom{n}{i} * 2^{n-i} \quad i \le n \]
+    \begin{align*}
+        \shortintertext{por el inciso i.}
+        \sum_{j=i}^n \binom{n}{j} \binom{j}{i} &= \sum_{j=i}^n \binom{n}{i} \binom{n-i}{j-i}\\
+        &= \binom{n}{i} \sum_{j=i}^n \binom{n-i}{j-i}\\
+        &= \binom{n}{i} \sum_{k=0}^{n-i} \binom{n-i}{k}
+        \shortintertext{la suma equivale a todos los posibles subconjuntos de un conjunto con $n-i$ elementos.}
+        &= \binom{n}{i} * 2^{n-i}
+    \end{align*}
+    
+    \item  Use part i. and Theoretical Exercise 13 to show that
+    \[ \sum_{j=i}^n \binom{n}{j} \binom{j}{i} (-1)^{(n-j)} = 0 \quad i < n\]
+    \begin{align*}
+        \shortintertext{por el inciso i.}
+        &\phantom{{}={}} \sum_{j=i}^n \binom{n}{j} \binom{j}{i} (-1)^{(n-j)}\\
+        &= \sum_{j=i}^n \binom{n}{i} \binom{n-i}{j-i} (-1)^{(n-j)}
+        \shortintertext{la suma equivale a todos los posibles subconjuntos de un conjunto con $n-i$ elementos.}
+        &= \binom{n}{i} * 2^{n-i}
+    \end{align*}
+\end{enumerate}

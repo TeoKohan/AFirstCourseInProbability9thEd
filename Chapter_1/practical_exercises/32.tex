@@ -1,0 +1,15 @@
+\item An elevator starts at the basement with 8 people (not including the elevator operator) and discharges them all by the time it reaches the top floor, number 6. In how many ways could the operator have perceived the people leaving if all people look alike to him? What if the 8 people consisted of 5 men and 3 women and the operator could tell a man from a woman?
+
+Buscamos soluciones a
+\[ x_1 + x_2 + x_3 + x_4 + x_5 + x_6 = 8,\ x_i \ge 0,\ 1 \le i \le 6 \]
+entonces
+\[ \binom{8+6-1}{6-1} \]
+si las 8 personas consisten en 5 hombres y 3 mujeres y el operador puede diferenciar entre hombres y mujeres
+\[ 
+\begin{cases}
+    x_1 + x_2 + x_3 + x_4 + x_5 + x_6 = 5,\ x_i \ge 0,\ 1 \le i \le 6\\
+    y_1 + y_2 + y_3 + y_4 + y_5 + y_6 = 3,\ y_i \ge 0,\ 1 \le i \le 6
+\end{cases}
+\]
+entonces
+\[ \binom{5+6-1}{6-1} * \binom{3+6-1}{6-1} \]

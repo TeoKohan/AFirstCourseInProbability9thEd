@@ -1,0 +1,13 @@
+\item A president, treasurer, and secretary, all different, are to be chosen from a club consisting of 10 people. How many different choices of officers are possible if
+\begin{enumerate}
+    \item there are no restrictions?
+    \[ \binom{10}{3} * 3! \]
+    \item A and B will not serve together?
+    \[ \binom{10}{3} * 3! - 3 * 2 * 8 \]
+    \item C and D will serve together or not at all?
+    \[ 3 * 2 * 8 + \binom{8}{3} * 3! \]
+    \item E must be an officer?
+    \[ \binom{9}{2} * 3! \]
+    \item F will serve only if he is president?
+    \[ \binom{9}{2} * 2! + \binom{9}{3} * 3! \]
+\end{enumerate}

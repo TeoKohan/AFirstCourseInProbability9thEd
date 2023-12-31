@@ -1,0 +1,37 @@
+\item Let $H_k(n)$ be the number of vectors $x_i, \dots, x_k$ for which each $x_i$ is a positive integer satisfying $1 \le x_i \le n$ and $x_1 \le x_2 \le \dots \le x_k$.
+\begin{enumerate}
+    \item Without any computations, argue that
+    \begin{align*}
+        H_1(n) &= n\\
+        H_k(n) &= \sum_{j=1}^n H_{k-1}(j)\quad k>1
+    \end{align*}
+    Es inmediato que $\displaystyle H_1(n) = n$.
+
+    Sea $H^{\star}_k(n)$ la cantidad de vectores $x_i, \dots, x_{k+1}$ para los cuales $x_i$ es un entero positivo, satisfaciendo $1 \le x_i \le n$, $x_1 \le x_2 \le \dots \le x_{k+1}$ y $x_{k+1} = n$. 
+
+    Es claro que 
+    \[ H_k(n) = \sum_{j=1}^n H^\star_{k}(j) \]
+
+    Además $H_{k-1}(j) = H^\star_{k}(j)$ (basta agregar o quitar $j$ al final de la secuencia).
+
+    Luego
+    \begin{align*}
+        H_k(n) &= \sum_{j=1}^n H^\star_{k}(j)
+        \shortintertext{como $H_{k-1}(j) = H^\star_{k}(j)$}
+        &= \sum_{j=1}^n H_{k-1}(j)
+    \end{align*}
+
+    \item  Use the preceding recursion to compute $H_3(5)$.
+
+    Primero calculemos $H_2(n)$,
+    \begin{align*}
+        H_2(n) &= \sum_{j=1}^n H_1(j)\\
+        &= \sum_{j=1}^n j\\
+        &= \frac{n * (n+1)}{2}
+        \shortintertext{luego usando el resultado anterior}
+        H_3(5) &= \sum_{j=1}^5 H_2(j)\\
+        &= \sum_{j=1}^5 \frac{j * (j+1)}{2}\\
+        &= \frac{1}{2} * \big( 2 + 6 + 12 + 20 + 30\big)\\
+        &= 35
+    \end{align*}
+\end{enumerate}

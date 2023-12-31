@@ -1,0 +1,44 @@
+\item Prove the multinomial theorem.
+\begin{proof}[Demostración] Del teorema multinomial.
+
+    preliminarmente
+    \begin{align*}
+        &\phantom{{}={}} \binom{n}{n_1, \dots, n_r}\\
+        &= \frac{n!}{n_1!\cdots n_r!}\\
+        &= \frac{n!}{n_1!\cdots n_r!} * \frac{(n - n_1)!}{(n - n_1)!}\\
+        &= \frac{n!}{n_1!*(n - n_1)!} * \frac{(n - n_1)!}{n_2!\cdots n_r!}
+        \shortintertext{como $n_2 + \dots + n_r = n - n_1$ entonces}
+        &= \binom{n}{n_1} * \binom{n-n_1}{n_2, \dots, n_r}
+    \end{align*}
+
+    Por inducción sobre $r$
+
+    si $r = 2$ entonces para todo $n$ es un caso del teorema binomial.
+
+    si el teorema es válido para $k$ entonces
+    \begin{align*}
+        &\phantom{{}={}}(x_1 + \dots + x_k)^n\\
+        &= \sum_{\substack{n_1, \dots, n_k \in \N_0^k:\\n_1+\dots+n_k = n}} \binom{n}{n_1, \dots, n_k} * x_1^{n_1} \cdots x_k^{n_k}
+    \end{align*}
+    luego
+    \begin{align*}
+        &\phantom{{}={}} \sum_{\substack{n_1, \dots, n_{k+1} \in \N_0^{k+1}:\\n_1+\dots+n_{k+1} = n}}{}\\
+        &\phantom{{}={}} \binom{n}{n_1, \dots, n_{k+1}} * x_1^{n_1} \cdots x_{k+1}^{n_{k+1}}\\
+        &=
+        \sum_{n_1 = 0}^n \sum_{\substack{n_2, \dots, n_{k+1} \in \N_0^{k}:\\n_2+\dots+n_{k+1} = n - n_1}}\\
+        &\phantom{{}={}} \binom{n}{n_1, \dots, n_{k+1}} * x_1^{n_1} \cdots x_{k+1}^{n_{k+1}}\\
+        &=
+        \sum_{n_1 = 0}^n \sum_{\substack{n_2, \dots, n_{k+1} \in \N_0^{k}:\\n_2+\dots+n_{k+1} = n - n_1}}
+        \shortintertext{}
+        &\phantom{{}={}}\binom{n}{n_1} * \binom{n-n_1}{n_2, \dots, n_{k+1}} * x_1^{n_1} \cdots x_{k+1}^{n_{k+1}}\\
+        &=
+        \sum_{n_1 = 0}^n \binom{n}{n_1} * x_1^{n_1} \sum_{\substack{n_2, \dots, n_{k+1} \in \N_0^{k}:\\n_2+\dots+n_{k+1} = n - n_1}}\\
+        &\phantom{{}={}} \binom{n-n_1}{n_2, \dots, n_{k+1}} * x_2^{n_2} \cdots x_{k+1}^{n_{k+1}}
+        \shortintertext{por hipótesis inductiva}
+        &=
+        \sum_{n_1 = 0}^n \binom{n}{n_1} * x_1^{n_1} * \big(x_2 + \dots + x_{k+1}\big)^{n-n_1}
+        \shortintertext{por el teorema del binomio}
+        &= (x_1 + (x_2 + \dots + x_{k+1}))^n\\
+        &= (x_1 + \dots + x_{k+1})^n \qedhere
+    \end{align*}
+\end{proof}

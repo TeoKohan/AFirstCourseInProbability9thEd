@@ -1,0 +1,13 @@
+\item Argue that there are exactly
+\[ \binom{r}{k} * \binom{n-1}{n-r+k} \]
+solutions of
+\[ x_1 + x_2 + \dots + x_r = n \]
+for which exactly $k$ of the $x_i$ are equal to 0.
+
+Primero elegir $k$ de los $r$ coeficientes para que sean 0
+\[ \binom{r}{k} \]
+De los $r-k$ restantes, que son mayores o iguales a 1 obtener todas las combinaciones
+\begin{align*}
+    \binom{n-1}{(r-k)-1} &= \binom{n-1}{(n-1)-((r-k)-1)}\\
+    &= \binom{n-1}{n-r+k}
+\end{align*}

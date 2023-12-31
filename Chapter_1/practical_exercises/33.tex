@@ -1,0 +1,28 @@
+\item We have \$20,000 that must be invested among 4 possible opportunities. Each investment must be integral in units of \$1000, and there are minimal investments that need to be made if one is to invest in these opportunities. The minimal investments are \$2000, \$2000, \$3000, and \$4000. How many different investment strategies are available if
+\begin{enumerate}
+    \item an investment must be made in each opportunity?
+
+    Dado que debemos invertir en todas las oportunidades entonces debemos apartar \$11000 para cubrir las inversiones mínimas dejándonos \$9000 para invertir libremente.
+
+    Buscamos soluciones a
+    \[ x_1 + x_2 + x_3 + x_4 = 9,\ x_i \ge 0,\ 1 \le i \le 4 \]
+    entonces
+    \[ \binom{9+4-1}{4-1} \]
+    
+    \item investments must be made in at least 3 of the 4 opportunities?
+
+    Considerar los casos
+    \begin{itemize}
+        \item Invirtiendo en las cuatro oportunidades
+        \[ \binom{9+4-1}{4-1} \]
+        \item No invirtiendo en alguna de las dos primeras oportunidades, nos quedan \$11000
+        \[ \binom{11+3-1}{3-1} \]
+        \item No invirtiendo en la tercer oportunidad, nos quedan \$12000
+        \[ \binom{12+3-1}{3-1} \]
+        \item No invirtiendo en la cuarta oportunidad, nos quedan \$13000
+        \[ \binom{13+3-1}{3-1} \]
+    \end{itemize}
+    Combinando los casos disjuntos
+    \[ \binom{12}{3} + 2 * \binom{13}{2} + \binom{14}{2} + \binom{15}{2} \]
+    
+\end{enumerate}

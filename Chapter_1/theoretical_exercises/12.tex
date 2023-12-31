@@ -1,0 +1,73 @@
+\item 
+\begin{enumerate}
+    \item Consider the following combinatorial identity:
+    \[ \sum_{k=1}^n k * \binom{n}{k} = n * 2^{n-1} \]
+    Present a combinatorial argument for this identity by considering a set of $n$ people and determining, in two ways, the number of possible selections of a committee of any size and a chairperson for the committee.
+
+    Consideremos un comité de tamaño fijo, $k$, hay $\displaystyle \binom{n}{k}$ maneras de elegir tal comité y $k$ posibles presidentes para este comité. Si consideramos todos los posibles tamaños de comité tenemos
+    \[ \sum_{k=1}^n k * \binom{n}{k} \]
+
+    Consideremos elegir un presidente entre las $n$ personas y luego para el resto de personas decidir si son miembros del comité o nó
+    \[ n * 2^{n-1} \]
+
+    \item Consider the following combinatorial identity:
+    \[ \sum_{k=1}^n \binom{n}{k} * k^2 = 2^{n-2} * n * (n+1) \]
+    Present a combinatorial argument for this identity by considering a set of $n$ people and determining, in two ways, the number of possible selections of a committee of any size a chairperson and a secretary for the committee (possible the same person).
+
+    Consideremos un comité de tamaño fijo, $k$, hay $\displaystyle \binom{n}{k}$ maneras de elegir tal comité, $k$ posibles presidentes y $k$ posibles secretarios para este comité. Si consideramos todos los posibles tamaños de comité tenemos
+    \[ \sum_{k=1}^n \binom{n}{k} * k^2 \]
+
+    Consideremos los casos donde
+    \begin{itemize}
+        \item[] El presidente y el secretario no son la misma persona
+        
+        Hay $n$ candidatos a presidente y $n-1$ candidatos a secretario, luego hay $2^{n-2}$ formas de determinar el resto de los miembros del comité de entre las $n-2$ personas que restan.
+        \[ 2^{n-2} * n * (n-1) \]
+        
+        \item[] El presidente y el secretario son la misma persona
+        
+        Hay $n$ candidatos y $2^{n-1}$ formas de determinar el resto de los miembros del comité de entre las $n-1$ personas que restan.
+        \[ 2^{n-1} * n \]
+    \end{itemize}
+
+    Combinando los casos disjuntos
+    \begin{align*}
+        &\phantom{{}={}} 2^{n-2} * n * (n-1) + 2^{n-1} * n\\
+        &= 2^{n-2} * \big( n * (n-1) + n * 2 \big)\\
+        &= 2^{n-2} * n * (n+1)
+    \end{align*}
+
+    \item Consider the following combinatorial identity:
+    \[ \sum_{k=1}^n \binom{n}{k} * k^3 = 2^{n-3} * n^2 * (n+3) \]
+    Present a combinatorial argument for this identity.
+
+    Consideremos un conjunto de $n$ personas, ambos lados de la identidad representa el número de posible selecciones de un comité su presidente, vice-presidente y secretario (todos posiblemente la misma persona).
+    
+    Consideremos un comité de tamaño fijo, $k$, hay $\displaystyle \binom{n}{k}$ maneras de elegir tal comité, $k$ posibles presidentes, $k$ posibles vice-presidentes y $k$ posibles secretarios para este comité. Si consideramos todos los posibles tamaños de comité tenemos
+    \[ \sum_{k=1}^n \binom{n}{k} k^3 \]
+
+    Consideremos los casos donde
+    \begin{itemize}
+        \item[] El presidente, vice-presidente y el secretario son la misma persona
+        
+        Hay $n$ maneras de elegir una persona que concentrará los tres cargos. Luego hay $2^{n-1}$ formas para decidir quienes de las restantes $n-1$ personas serán miembros del comité.
+        \[ n * 2^{n-1} \]
+        
+        \item[] Dos personas se reparten los cargos de presidente, vice-presidente y secretario
+        
+        Hay $\displaystyle \binom{n}{2}$ formas de seleccionar a las dos personas y $2^3 - 2$ formas de repartir los cargos. Luego hay $2^{n-2}$ formas para decidir quienes de las restantes $n-2$ personas serán miembros del comité.
+        \[ 3 * n * (n-1) * 2^{n-2} \]
+        
+        \item[] Tres personas se reparten los cargos de presidente, vice-presidente y secretario
+
+        Hay $\displaystyle \binom{n}{3}$ formas de seleccionar a las tres personas y $3!$ formas de repartir los cargos. Luego hay $2^{n-3}$ formas para decidir quienes de las restantes $n-2$ personas serán miembros del comité.
+        \[ (n-2) * (n-1) * n * 2^{n-3} \]
+    \end{itemize}
+    Combinando los casos disjuntos
+    \begin{align*}
+       &\phantom{{}={}} 2^{n-3} * (4 * n + 6 * n * (n-1) + (n-2) * (n-1) * n)\\
+       &= 2^{n-3} * ((4n) + (6n^2 - 6n) + (n^3 - 3n^2 + 2n))\\
+       &= 2^{n-3} * (n^3 + 3n^2)\\
+       &= 2^{n-3} * n^2 * (n + 3)
+    \end{align*}
+\end{enumerate}

@@ -1,0 +1,13 @@
+\item Consider three classes, each consisting of $n$ students. From this group of $3n$ students, a group of 3 students is to be chosen.
+\begin{enumerate}
+    \item How many choices are possible?
+    \[ \binom{3n}{3} \]
+    \item How many choices are there in which all 3 students are in the same class?
+    \[ 3 * \binom{n}{3} \]
+    \item How many choices are there in which 2 of the 3 students are in the same class and the other student is in a different class?
+    \[ 3 * \binom{n}{2} * 2 * \binom{n}{1} \]
+    \item How many choices are there in which all 3 students are in different classes?
+    \[ n * n * n \]
+    \item Using the results of parts i.\@ through iv.\@, write a combinatorial identity.
+    \[ \binom{3n}{3} = 3 * \binom{n}{3} + 3 * \binom{n}{2} * 2 * \binom{n}{1} + n^3 \]
+\end{enumerate}

@@ -1,0 +1,13 @@
+\item Use Theoretical Exercise 8 to prove that
+\[ \binom{2n}{n} = \sum_{i=0}^n \binom{n}{k}^2 \]
+
+\begin{proof}[Demostración] De la identidad anterior.
+
+    Usando el resultado del ejercicio $8$
+    \begin{align*}
+        \binom{n+n}{n}
+        &= \sum_{k=0}^n \binom{n}{k} \binom{n}{n-k}\\
+        &= \sum_{k=0}^n \binom{n}{k} \frac{n!}{(n-k)! * (n-n+k)!}\\
+        &= \sum_{k=0}^n \binom{n}{k}^2 \qedhere
+    \end{align*}
+\end{proof}

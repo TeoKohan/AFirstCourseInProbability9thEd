@@ -1,0 +1,17 @@
+\item Suppose that 10 fish are caught at a lake that contains 5 distinct types of fish.
+\begin{enumerate}
+    \item How many different outcomes are possible, where an outcome specifies the numbers of caught fish of each of the 5 types?
+    \[ x_1 + x_2 + \dots + x_5 = 10,\ x_i \ge 0,\ 1 \le i \le 5 \]
+    por lo tanto
+    \[ \binom{10+5-1}{5-1} \]
+    \item How many outcomes are possible when 3 of the 10 fish caught are trout?
+    \[ x_1 + x_2 + \dots + x_5 = 10,\ x_1 = 3,\ x_i \ge 0,\ 2 \le i \le 5 \]
+    por lo tanto
+    \[ \binom{7+4-1}{4-1} \]
+    \item How many when at least 2 of the 10 are trout?
+    \[ x_1 + x_2 + \dots + x_5 = 10,\ x_1 \ge 2,\ x_i \ge 0,\ 2 \le i \le 5 \]
+    sea $y_1 = x_1 - 2$, $y_i = x_i$, $2 \le i \le 5$ entonces
+    \[ y_1 + \dots + y_5 = 8,\ y_i \ge 0,\ 1 \le i \le 5 \]
+    por lo tanto
+    \[ \binom{8+5-1}{5-1} \]
+\end{enumerate}

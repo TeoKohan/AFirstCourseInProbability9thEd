@@ -1,0 +1,36 @@
+\item From a group of $n$ people, suppose that we want to choose a committee of $k$, $k \le n$, one of whom is to be designated as chairperson.
+\begin{enumerate}
+    \item By focusing first on the choice of the committee and then on the choice of the chair, argue that there are $\displaystyle \binom{n}{k} * k$ possible choices.
+
+    Hay $\displaystyle \binom{n}{k}$ formas de elegir un comité de $k$ miembros y luego $k$ formas de elegir un presidente entre los $k$ miembros.
+
+    \item By focusing first on the choice of the non chair committee members and then on the choice of the chair, argue that there are $\displaystyle \binom{n}{k - 1} \big( n-k+1 \big)$ possible choices.
+
+    Hay $\displaystyle \binom{n}{k - 1}$ formas de elegir un comité de $k-1$ miembros, lo que nos deja con $n-k+1$ personas entre las cuales elegir al presidente.
+    
+    \item By focusing first on the choice of the chair and then on the choice of the other committee members, argue that there are $\displaystyle n * \binom{n-1}{k-1}$ possible choices.
+
+    Hay $n$ formas de elegir al presidente entre las $n$ personas y luego $\binom{n}{k-1}$ formas de seleccionar un comité de $k-1$ miembros de entre las $n-1$ personas restantes.
+
+    \item Conclude from parts i., ii., and iii. that
+    \[
+        \binom{n}{k} * k = \binom{n}{k - 1} \big( n-k+1 \big) = n * \binom{n-1}{k-1}
+    \]
+
+    Se concluye inmediatamente de i., ii. and iii.
+
+    \item Use the factorial definition of $\displaystyle \binom{m}{r}$ to verify the identity in part iv.
+
+    \begin{align*}
+        &\phantom{{}={}} \binom{n}{k} * k\\
+        &= \frac{n!}{k! * (n-k)!} * k\\
+        &= \frac{n!}{(k-1)! * (n-k+1)!} * \frac{n-k+1}{k} * k
+        \shortintertext{lo cual concluye la primera igualdad}
+        &= \binom{n}{k-1} * (n-k+1)\\
+        &= \frac{n!}{(k-1)! * (n-k+1)!} * (n-k+1)\\
+        &= n * \frac{(n-1)!}{(k-1)! * (n-k)!}  * \frac{n-k+1}{n-k+1}
+        \shortintertext{lo cual concluye la segunda igualdad}
+        &= n * \binom{n-1}{k-1} \qedhere
+    \end{align*}
+    
+\end{enumerate}

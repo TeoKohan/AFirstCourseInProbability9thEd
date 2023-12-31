@@ -1,0 +1,14 @@
+\item show that the following equality is valid
+\[ 
+\sum_{\substack{x_1,\dots,x_r\in\N_0^r:\\
+x_1+\dots+x_r=n}} \frac{n!}{x_1! \cdots x_r!} = r^n
+\]
+Por definición
+\[ \sum_{\substack{x_1,\dots,x_r\in\N_0^r:\\
+    x_1+\dots+x_r=n}} \frac{n!}{x_1! \cdots x_r!}
+    = \sum_{\substack{x_1,\dots,x_r\in\N_0^r:\\
+    x_1+\dots+x_r=n}} \binom{n}{x_1,\dots,x_r} 
+\]
+Todas las maneras de seleccionar desde 1 hasta $r$ subconjuntos de $n$ objetos distintos.
+
+De otra forma, asignar a los $n$ uno de los $r$ grupos, i.e.\@ $r^n$.
