@@ -1,9 +1,9 @@
 \item Show that if $P(A_i) = 1$ for all $i \ge 1$, then 
 \[P \Big( \bigcap_{i=1}^\infty A_i \Big) = 1.\]
 \begin{align*}
-    P \Big( \bigcap_{i=1}^\infty A_i \Big) &= 1 - P \Big( \bigcup_{i=1}^\infty A_i^c \Big)
+    P \Big( \bigcap_{i=1}^\infty A_i \Big) &= 1 - P \Big( \bigcup_{i=1}^\infty A_i^\complement  \Big)
     \shortintertext{por el ejercicio anterior}
-    &\ge 1 - \sum_{i=1}^\infty P(A_i^c)\\
+    &\ge 1 - \sum_{i=1}^\infty P(A_i^\complement )\\
     &\ge 1 - \lim_{n \to \infty} \sum_{i=1}^n 0\\
     &\ge 1
 \end{align*}

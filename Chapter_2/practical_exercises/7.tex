@@ -1,11 +1,10 @@
 \item  Consider an experiment that consists of determining the type of job—either blue collar or white collar—and the political affiliation—Republican, Democratic, or Independent—of the 15 members of an adult soccer team. How many outcomes are
 \begin{enumerate}
     \item in the sample space?
-    \begin{alignat*}{2}
-        S &= \{&&(x_1,\dots,x_{15}) :\\
-        &&&x_i \in \{b, w\} \times \{r, d, i\}, 1 \le i \le 15 \}
-    \end{alignat*}
-    \[ \#(S) = 6^{15} \]
+    \[
+        S = (\{b, w\} \times \{r, d, i\})^{15}
+    \]
+    \[ |S| = 6^{15} \]
     \item in the event that at least one of the team members is a blue-collar worker?
     \[ 6^{15} - 3^{15} \]
     \item in the event that none of the team members considers himself or herself an Independent?

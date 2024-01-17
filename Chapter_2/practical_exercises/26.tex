@@ -10,7 +10,7 @@ $P(E_7) = \frac{6}{36}$ y $P(E_{11}) = \frac{2}{36}$.
 Para $i=4,5,6,8,9,10$
 \[ P(E_i) = \sum_{n=1}^\infty P(E_{i,n}). \]
 
-%k = (30 - \#(k^+))/36)
+%k = (30 - |k^+|)/36)
 %S = k^0 + k + ... + k^n
 %k * S = k + k^2 + ... + k^{n+1}
 %S - k * S = k^0 - k^{n+1}
@@ -19,29 +19,27 @@ Para $i=4,5,6,8,9,10$
 Sea $P(k^+)$ la probabilidad de sumar $k$ para $k=2,3,\dots,11,12$
 \begin{align*}
     &\phantom{{}={}} P(E_{k,n})\\
-    &= P(k^+) * {}\\
-    &\phantom{{}={}} P(\{ \text{no suma $k$ o $7$ en $n-2$ tiros} \}) * {}\\
-    &\phantom{{}={}} P(k^+)\\
-    &= P(k^+)^2 * \big(1 - P(k^+\cup 7^+)\big)^{n-2}\\
-    &= P(k^+)^2 * \big(1 - P(k^+) - P(7^+)\big)^{n-2}\\
-    &= \Big(\frac{\#(k^+)}{36}\Big)^2 *\Big(1 - \frac{\#(k^+)}{36} - \frac{6}{36} \Big)^{n-2}\\
-    &= \Big(\frac{\#(k^+)}{36}\Big)^2 * \Big(\frac{30 - \#(k^+)}{36}\Big)^{n-2}
-    \shortintertext{entonces}
+    &= P(\{ \text{no suma $k$ o $7$} \})^{n-2} * P(k^+)\\
+    &= \big(1 - P(\{ \text{suma $k$ o $7$} \})\big)^{n-2} * P(k^+)\\
+    &= \big(1 - P(k^+) - P(7^+)\big)^{n-2} * P(k^+)\\
+    &= \Big(1 - \frac{|k^+|}{36} - \frac{6}{36} \Big)^{n-2} * \frac{|k^+|}{36}\\
+    &= \Big(\frac{30 - |k^+|}{36}\Big)^{n-2} * \frac{|k^+|}{36}
+    \shortintertext{entonces computando la probabilidad de obtener la tirada original de $k$}
     &\phantom{{}={}} P(E_{k})\\
-    &= \sum_{i=0}^\infty P(E_{k, i})\\
-    &= \sum_{i=0}^\infty \Big(\frac{\#(k^+)}{36}\Big)^2 * \Big(\frac{30 - \#(k^+)}{36}\Big)^{i}\\
-    &= \lim_{n\to\infty}\sum_{i=0}^n \Big(\frac{\#(k^+)}{36}\Big)^2 * \Big(\frac{30 - \#(k^+)}{36}\Big)^{i} 
+    &= \frac{|k^+|}{36} * \sum_{i=0}^\infty P(E_{k, i})\\
+    &= \frac{|k^+|}{36} * \sum_{i=0}^\infty \frac{|k^+|}{36} * \Big(\frac{30 - |k^+|}{36}\Big)^{i}\\
+    &= \Big(\frac{|k^+|}{36}\Big)^2 * \lim_{n\to\infty}\sum_{i=0}^n * \Big(\frac{30 - |k^+|}{36}\Big)^{i} 
     \shortintertext{por formula cerrada de serie geométrica}
-    &= \Big(\frac{\#(k^+)}{36}\Big)^2 * \lim_{n\to\infty} 
+    &= \Big(\frac{|k^+|}{36}\Big)^2 * \lim_{n\to\infty} 
     \frac
-    {1 - \big(\frac{30 - \#(k^+)}{36}\big)^{n+1}}
-    {1 - \frac{30 - \#(k^+)}{36}}
-    \shortintertext{Como $\frac{36 - \#(k^+) - \#(7^+)}{36} < 1$}
-    &= \Big(\frac{\#(k^+)}{36}\Big)^2 *
+    {1 - \big(\frac{30 - |k^+|}{36}\big)^{n+1}}
+    {1 - \frac{30 - |k^+|}{36}}
+    \shortintertext{Como $0 < \frac{30 - |k^+|}{36} < 1$}
+    &= \Big(\frac{|k^+|}{36}\Big)^2 *
     \frac
     {1}
-    {\frac{36 - (30 - \#(k^+))}{36}}\\
-    &= \frac{\#(k^+)}{36} * \frac{\#(k^+)}{6 + \#(k^+)}
+    {\frac{36 - (30 - |k^+|)}{36}}\\
+    &= \frac{|k^+|}{36} * \frac{|k^+|}{6 + |k^+|}
 \end{align*}
 Por lo tanto
 \begin{alignat*}{2}
@@ -55,7 +53,6 @@ Por lo tanto
 Luego la probabilidad buscada es
 \begin{align*}
     &\phantom{{}={}} \sum_{i=2}^{12} P(E_i)\\
-    &= \frac{1}{36} * \Big(0+0+\frac{9}{9}+\frac{16}{10}+{}\\
-    &\phantom{{}={}} \frac{25}{11}+6+\frac{25}{11}+\frac{16}{10}+\frac{9}{9}+2+0\Big)\\
+    &= \frac{1}{36} * \Big(\frac{9}{9}+\frac{16}{10}+\frac{25}{11}+6+\frac{25}{11}+\frac{16}{10}+\frac{9}{9}+2\Big)\\
     &\approx .4\overline{92}
 \end{align*}

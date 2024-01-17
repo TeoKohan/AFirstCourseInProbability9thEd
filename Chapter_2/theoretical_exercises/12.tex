@@ -1,8 +1,8 @@
 \item Show that the probability that exactly one of the events $E$ or $F$ occurs equals $P(E) + P(F) - 2P(EF)$.
 \begin{align*}
-    &\phantom{{}={}} P(EF^c \cup E^cF)\\
-    &= P(EF^c) + P(E^cF) - P(EF^cE^cF)\\
-    &= P(E^c\cup F) + P(E\cup F^c) - 0\\
+    &\phantom{{}={}} P(EF^\complement  \cup E^\complement F)\\
+    &= P(EF^\complement ) + P(E^\complement F) - P(EF^\complement E^\complement F)\\
+    &= P(E^\complement \cup F) + P(E\cup F^\complement ) - 0\\
     &= P(F) - P(EF) + P(E) - P(EF)\\
     &= P(E) + P(F) - 2P(EF)
 \end{align*}

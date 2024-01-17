@@ -1,11 +1,12 @@
 \item Suppose that you are playing blackjack against a dealer. In a freshly shuffled deck, what is the probability that neither you nor the dealer is dealt a blackjack?
 
+Sea $A$ el evento tal que el jugador obtiene blackjack y $B$ el evento tal que el croupier obtiene blackjack
 \begin{align*}
-    &\phantom{\;=\;} P(A^c\cap B^c)\\
-    &= 1 - P(A\cup B)\\
+    &\phantom{\;=\;} P(A^\complement \cap B^\complement )\\
+    &= 1 - P(A \cup B)\\
     &= 1 - (P(A) + P(B) - P(A\cap B))\\
     &= 1 
-    - \Bigg (\frac{4^3}{\binom{52}{2}} + \frac{4^3}{\binom{52}{2}} 
-    - \frac{\binom{4}{2} * \binom{16}{2} * (4! - 8)}{\binom{52}{4} * 4!}\Bigg )\\
-    &\approx .0983
+    - \Bigg (\frac{4 * 16}{\binom{52}{2}} + \frac{4 * 16}{\binom{52}{2}} 
+    - \frac{4 * 16 * 3 * 15}{\binom{52}{2} * \binom{50}{2}}\Bigg )\\
+    &\approx .9052
 \end{align*}

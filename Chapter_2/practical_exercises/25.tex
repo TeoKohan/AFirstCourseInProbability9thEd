@@ -2,12 +2,11 @@
 
 \emph{Hint}: Let $E_n$ denote the event that a 5 occurs on the $n$th roll and no 5 or 7 occurs on the first $n - 1$ rolls. Compute $P(E_n)$ and argue that $\sum_{n=1}^\infty P(E_n)$ is the desired probability.
 
+Sea 
 \begin{align*}
     &\phantom{{}={}} P(E_n)\\
-    &= P(\{\text{no suma 5 o 7 en $n-1$ tiros}\}) * {}\\
-    &\phantom{{}={}} P(\{\text{suma 5 o 7}\})\\
-    &= \big(1 - P(\{\text{sumar 5 o 7}\})\big)^{n-1} *\\
-    &\phantom{{}={}} P(\{\text{sumar 5 o 7}\})\\
+    &= P(\{\text{no suma 5 o 7}\})^{n-1} * P(\{\text{suma 5}\})\\
+    &= \big(1 - P(\{\text{suma 5 o 7}\})\big)^{n-1} * P(\{\text{suma 5}\})\\
     &= \bigg(\frac{26}{6^2}\bigg)^{n-1} * \frac{4}{6^2}
 \shortintertext{entonces}
     &\phantom{{}={}} \sum_{i=1}^\infty P(E_n)\\

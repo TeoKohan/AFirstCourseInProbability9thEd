@@ -2,7 +2,7 @@
 \begin{align*}
     &\phantom{{}={}} P(E \cup F \cup G)\\
     &= P(E) + P(F) + P(G) - {}\\
-    &\phantom{{}={}} P(E^cFG) - P(EF^cG) - P(EFG^c) - {}\\
+    &\phantom{{}={}} P(E^\complement FG) - P(EF^\complement G) - P(EFG^\complement ) - {}\\
     &\phantom{{}={}} 2 P(EFG)
 \end{align*}
 
@@ -17,15 +17,15 @@
         &= P(E) + P(F) + P(G) - {}\\
         &\phantom{{}={}} P(FG) - P(EF) - P(EG) + P(EFG)\\
         &= P(E) + P(F) + P(G) - {}\\
-        &\phantom{{}={}} (P(EFG) P(E^cFG)) - {}\\
-        &\phantom{{}={}} (P(EFG) + P(EFG^c)) - {}\\
-        &\phantom{{}={}} (P(EFG) + P(EF^cG)) + {}\\
+        &\phantom{{}={}} (P(EFG) P(E^\complement FG)) - {}\\
+        &\phantom{{}={}} (P(EFG) + P(EFG^\complement )) - {}\\
+        &\phantom{{}={}} (P(EFG) + P(EF^\complement G)) + {}\\
         &\phantom{{}={}} P(EFG)\\
         &= P(E) + P(F) + P(G) - 3 P(EFG) - {}\\
-        &\phantom{{}={}} P(E^cFG) - P(EFG^c) - P(EF^cG) + {}\\
+        &\phantom{{}={}} P(E^\complement FG) - P(EFG^\complement ) - P(EF^\complement G) + {}\\
         &\phantom{{}={}} P(EFG)\\
         &= P(E) + P(F) + P(G) - {}\\
-        &\phantom{{}={}} P(E^cFG) - P(EFG^c) - P(EF^cG) - {}\\
+        &\phantom{{}={}} P(E^\complement FG) - P(EFG^\complement ) - P(EF^\complement G) - {}\\
         &\phantom{{}={}} 2 P(EFG) \qedhere
     \end{align*}
     

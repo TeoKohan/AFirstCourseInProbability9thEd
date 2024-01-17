@@ -2,26 +2,22 @@
 \begin{enumerate}
     \item If a student is chosen randomly, what is the probability that he or she is not in any of the language classes?
     \begin{align*}
-        &\phantom{\;=\;} P(S^cF^cG^c)\\
+        &\phantom{\;=\;} P(S^\complement F^\complement G^\complement )\\
         &= 1 - P(S\cup F \cup G)\\
-        &= 1 - \Big ( P(S) + P(F) + P(G) -\\
-        &\phantom{\;=\;} P(SF) - P(SG) - P(FG) + P(SFG) \Big )\\
         &= 
-        1 - {}\\
-        &\phantom{\;=\;}
-        \left ( .28 + .26 + .16 - .12 - .04 - .06 + .02 \right )\\
+        1 - ( .28 + .26 + .16 - .12 - .04 - .06 + .02 )\\
         &= 1 - .5\\
         &= .5
     \end{align*}
     \item If a student is chosen randomly, what is the probability that he or she is taking exactly one language class?
     \begin{align*}
-        &{\phantom{\; = \;}}1 - P(S^cF^cG^c) - {}\\
-        &\phantom{\;=\;} P(SFG^c) - P(SF^cG) - P(S^cFG) + {}\\
+        &{\phantom{\; = \;}}1 - P(S^\complement F^\complement G^\complement ) - {}\\
+        &\phantom{\;=\;} P(SFG^\complement ) - P(SF^\complement G) - P(S^\complement FG) + {}\\
         &\phantom{\;=\;} P(SFG) \\
         &=1 - .5 - .12 - .04 - .06 + 2 * .02\\
         &=1 - .68\\
         &= .32
     \end{align*}
     \item If 2 students are chosen randomly, what is the probability that at least 1 is taking a language class?
-    \[ \frac{1}{2} + \frac{1}{2} * \frac{50}{99} \]
+    \[ 1 - \frac{50}{100} * \frac{49}{99} \]
 \end{enumerate}

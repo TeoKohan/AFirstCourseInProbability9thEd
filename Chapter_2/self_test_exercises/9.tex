@@ -14,7 +14,8 @@ Sea $S = \bigcup_{i=1}^n A_i$ si realizamos el experimento de tomar al azar un e
 \[ P(A) = \frac{N(A)}{N(S)} \]
 luego
 \begin{align*}
-    N(\bigcup_{i=1}^n A_i) &= N(S) * P(S)\\
+    &\phantom{{}={}} N(\bigcup_{i=1}^n A_i) * 1\\
+    &= N(S) * P(S)\\
     &= N(S) * P(\bigcup_{i=1}^n A_i)\\
     &= N(S) * \sum_{r=1}^n (-1)^{r+1} \sum_{i_1 < \cdots < i_r} P(\bigcap_{j=1}^r A_{i_j})\\
     &= 

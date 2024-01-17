@@ -1,16 +1,16 @@
-\item $F = FE \cup FE^c$ and $E \cup F = E \cup E^cF$.
+\item $F = FE \cup FE^\complement $ and $E \cup F = E \cup E^\complement F$.
 
 \begin{proof}[Demostración] de la relación anterior.
 
     \begin{align*}
         F &= FS\\
-        &= F (E\cup E^c)\\
-        &= FE \cup F E^c
+        &= F (E\cup E^\complement )\\
+        &= FE \cup F E^\complement 
         \shortintertext{y}
-        E \cup F &= (E \cup F)(E\cup E^c)\\
-        &= ((E\cup F)E) \cup ((E\cup F)E^c)\\
-        &= E \cup ((E^c E)\cup(E^c F))\\
-        &= E \cup (\varnothing\cup(E^c F))\\
-        &= E \cup E^c F \qedhere
+        E \cup F &= (E \cup F)(E\cup E^\complement )\\
+        &= ((E\cup F)E) \cup ((E\cup F)E^\complement )\\
+        &= E \cup ((E^\complement  E)\cup(E^\complement  F))\\
+        &= E \cup (\varnothing\cup(E^\complement  F))\\
+        &= E \cup E^\complement  F \qedhere
     \end{align*}
 \end{proof}

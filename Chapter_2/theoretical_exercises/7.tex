@@ -1,6 +1,6 @@
 \item Use Venn diagrams
 \begin{enumerate}
-    \item to simplify $(E \cup F)(E \cup F^c)$
+    \item to simplify $(E \cup F)(E \cup F^\complement )$
     \[
     \begin{tikzpicture}[scale=0.75]
     \fill[fill=black!50] ( 90:.75) circle (1) (210:.75) circle (1);
@@ -20,7 +20,7 @@
     \foreach \a/\l in {90/E,210/F,330/G} {
         \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
     }
-    \node at (0, -2) {$E \cup F^c$};
+    \node at (0, -2) {$E \cup F^\complement $};
     \end{tikzpicture}
     \]
     su intersección
@@ -30,12 +30,12 @@
     \foreach \a/\l in {90/E,210/F,330/G} {
         \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
     }
-    \node at (0, -2) {$(E \cup F) (E \cup F^c)$};
+    \node at (0, -2) {$(E \cup F) (E \cup F^\complement )$};
     \end{tikzpicture}
     \]
-    \item to prove DeMorgan’s laws for events $E$ and $F$. (prove $(E \cup F)^c = E^cF^c$, and $(EF)^c = E^c \cup F^c$)
+    \item to prove DeMorgan’s laws for events $E$ and $F$. (prove $(E \cup F)^\complement  = E^\complement F^\complement $, and $(EF)^\complement  = E^\complement  \cup F^\complement $)
 
-    \begin{proof}[Demostración] $(E \cup F)^c = E^cF^c$
+    \begin{proof}[Demostración] $(E \cup F)^\complement  = E^\complement F^\complement $
         \[
         \begin{tikzpicture}[scale=0.75]
         \fill[fill=black!50] ( 90:.75) circle (1) (210:.75) circle (1);
@@ -56,7 +56,7 @@
         \foreach \a/\l in {90/E,210/F,330/G} {
             \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
         }
-        \node at (0, -2) {$(E \cup F)^c$};
+        \node at (0, -2) {$(E \cup F)^\complement $};
         \end{tikzpicture}
         \]
         \[
@@ -73,7 +73,7 @@
         \foreach \a/\l in {90/E,210/F,330/G} {
             \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
         }
-        \node at (0, -2) {$E^c$};
+        \node at (0, -2) {$E^\complement $};
         \end{tikzpicture}
         \hspace{1em}
         \begin{tikzpicture}[scale=0.75]
@@ -89,7 +89,7 @@
         \foreach \a/\l in {90/E,210/F,330/G} {
             \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
         }
-        \node at (0, -2) {$F^c$};
+        \node at (0, -2) {$F^\complement $};
         \end{tikzpicture}
         \]
         su intersección
@@ -103,13 +103,13 @@
         \foreach \a/\l in {90/E,210/F,330/G} {
             \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
         }
-        \node at (0, -2) {$E^c F^c$};
+        \node at (0, -2) {$E^\complement  F^\complement $};
         \end{tikzpicture}
         \qedhere \]
     \end{proof}
     
     
-    \begin{proof}[Demostración] $(EF)^c = E^c \cup F^c$
+    \begin{proof}[Demostración] $(EF)^\complement  = E^\complement  \cup F^\complement $
         \[
         \begin{tikzpicture}[scale=0.75]
         \scope
@@ -141,7 +141,7 @@
         \foreach \a/\l in {90/E,210/F,330/G} {
             \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
         }
-        \node at (0, -2) {$(EF)^c$};
+        \node at (0, -2) {$(EF)^\complement $};
         \end{tikzpicture}
         \]
         \[
@@ -158,7 +158,7 @@
         \foreach \a/\l in {90/E,210/F,330/G} {
             \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
         }
-        \node at (0, -2) {$E^c$};
+        \node at (0, -2) {$E^\complement $};
         \end{tikzpicture}
         \hspace{1em}
         \begin{tikzpicture}[scale=0.75]
@@ -174,7 +174,7 @@
         \foreach \a/\l in {90/E,210/F,330/G} {
             \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
         }
-        \node at (0, -2) {$F^c$};
+        \node at (0, -2) {$F^\complement $};
         \end{tikzpicture}
         \]
         su unión
@@ -196,7 +196,7 @@
         \foreach \a/\l in {90/E,210/F,330/G} {
             \path[draw] ++(\a:.75) circle (1) node {$\scriptstyle \l$};
         }
-        \node at (0, -2) {$E^c \cup F^c$};
+        \node at (0, -2) {$E^\complement  \cup F^\complement $};
         \end{tikzpicture} \qedhere
         \]
     \end{proof}

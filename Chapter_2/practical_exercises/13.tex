@@ -17,9 +17,7 @@ and 1\% read I, II and III.
         &= P(\text{I}) + P(\text{II}) + P(\text{III}) - {}\\
         &\phantom{\;=\;} 2 * P(\text{I}\ \text{II}) - 2 * P(\text{I}\ \text{III}) - 2 * P(\text{II}\ \text{III}) +{}\\
         &\phantom{\;=\;} 3 * P(\text{I}\ \text{II}\ \text{III})\\
-        &= .1 + .3 + .05 - {}\\
-        &\phantom{\;=\;} 2 * .08 - 2 * .02 - 2 * .04 + {}\\
-        &\phantom{\;=\;}3 * .01\\
+        &= .1 + .3 + .05 - 2 * (.08 + .02 + .04) + 3 * .01\\
         &= .2
     \end{align*}
     \[ .2 * 100000 = 20000 \]
@@ -35,8 +33,7 @@ and 1\% read I, II and III.
     \item If I and III are morning papers and II is an evening paper, how many people read at least one morning paper plus an evening paper?
     \begin{align*}
         &\phantom{\;=\;} P((\text{I}\ \text{II})\cup(\text{III}\ \text{II}))\\
-        &= P(\text{I}\ \text{II})+P(\text{III}\ \text{II})- {}\\
-        &\phantom{\;=\;} P((\text{I}\ \text{II})\cap(\text{III}\ \text{II}))\\
+        &= P(\text{I}\ \text{II})+P(\text{III}\ \text{II})- P((\text{I}\ \text{II})\cap(\text{III}\ \text{II}))\\
         &= P(\text{I}\ \text{II})+P(\text{III}\ \text{II})- P(\text{I}\ \text{II}\ \text{III})\\
         &= .08 + .04 - .01\\
         &= .11
@@ -53,9 +50,9 @@ and 1\% read I, II and III.
     \[ .68 * 100000 = 68000 \]
     \item How many people read only one morning paper and one evening paper?
     \begin{align*}
-        &\phantom{\;=\;} P((\text{I}\ \text{II}\ \text{III}^c)\cup(\text{I}^c\ \text{II}\ \text{III}))\\
+        &\phantom{\;=\;} P((\text{I}\ \text{II}\ \text{III}^\complement )\cup(\text{I}^\complement \ \text{II}\ \text{III}))\\
         &=
-        P(\text{I}\ \text{II}\ \text{III}^c) + P(\text{I}^c\ \text{II}\ \text{III})\\
+        P(\text{I}\ \text{II}\ \text{III}^\complement ) + P(\text{I}^\complement \ \text{II}\ \text{III})\\
         &= P(\text{I}\ \text{II}) - P(\text{I}\ \text{II}\ \text{III}) + {}\\
         &\phantom{\;=\;} P(\text{II}\ \text{III}) - P(\text{I}\ \text{II}\ \text{III})\\
         &= .08 - .01 + .04 - .01\\

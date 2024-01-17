@@ -2,10 +2,10 @@
 \begin{enumerate}
     \item none of these items?
 
-    Sean $A$, $B$, $C$ los eventos tales que el cliente compra el traje, la remera o una corbata respectivamente entonces buscamos $P(A^c B^c C^c)$.
+    Sean $A$, $B$, $C$ los eventos tales que el cliente compra el traje, la remera o una corbata respectivamente entonces buscamos $P(A^\complement  B^\complement  C^\complement )$.
     \begin{align*}
-        &\phantom{{}={}} P(A^c B^c C^c)\\
-        &= 1 - P((A^c B^c C^c)^c)\\
+        &\phantom{{}={}} P(A^\complement  B^\complement  C^\complement )\\
+        &= 1 - P((A^\complement  B^\complement  C^\complement )^\complement )\\
         &= 1 - P(A \cup B \cup C)\\
         &= 1 - \Big ( P(A) + P(B) + P(C) - {}\\
         &\phantom{{}={}} P(A B) -
@@ -21,8 +21,8 @@
         &= 1 - \sum_{i\in\{0,2,3\}} P(\{\text{exactamente $i$ items}\})\\
         &= 1 - \big( .49 + P(\{\text{exactamente 2 items}\}) + .06 \big)\\
         &= .45 - P(\{\text{exactamente 2 items}\})\\
-        &= .45 - \big ( P(ABC^c \cup AB^cC \cup A^cBC) \big )\\
-        &= .45 - \big ( P(ABC^c) + P(AB^cC) + P(A^cBC) \big )\\
+        &= .45 - \big ( P(ABC^\complement  \cup AB^\complement C \cup A^\complement BC) \big )\\
+        &= .45 - \big ( P(ABC^\complement ) + P(AB^\complement C) + P(A^\complement BC) \big )\\
         &= .45 - P(AB) - P(AC) - P(BC) + {}\\
         &\phantom{{}={}} 3 * P(ABC)\\
         &= .45 - .11 - .14 - .10 + 3 * .06\\

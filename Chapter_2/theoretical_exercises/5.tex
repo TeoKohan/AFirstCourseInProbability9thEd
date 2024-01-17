@@ -5,13 +5,13 @@ Sea
 \[ 
 F_k = \begin{cases}
     E_1 &\text{si $k = 1$} \\
-    E_k \left ( \bigcap_{i=1}^{k-1} E_i^c \right ) &\text{en otro caso}
+    E_k \left ( \bigcap_{i=1}^{k-1} E_i^\complement  \right ) &\text{en otro caso}
 \end{cases}
 \]
 
-Por inducción, $F_2$ es disjunto con $F_1$ ya que $F_2 = E_2 E_1^c$ y
+Por inducción, $F_2$ es disjunto con $F_1$ ya que $F_2 = E_2 E_1^\complement $ y
 \begin{align*}
-    F_1 \cup F_2 &= E_1 \cup (E_2 E_1^c)
+    F_1 \cup F_2 &= E_1 \cup (E_2 E_1^\complement )
     \shortintertext{por el ejercicio 3}
     &= E_1 \cup E_2
 \end{align*}
@@ -19,13 +19,13 @@ Por inducción, $F_2$ es disjunto con $F_1$ ya que $F_2 = E_2 E_1^c$ y
 Si $F_i F_j = \varnothing$ para $1 \le i, j \le k$, $i \ne j$ entonces, sea $j \le k$
 \begin{align*}
     F_{k+1} F_{j} &= 
-    \left ( E_{k+1} \bigcap_{i=1}^k E_i^c \right ) 
-    \left ( E_j \bigcap_{i=1}^{j-1} E_i^c \right )
+    \left ( E_{k+1} \bigcap_{i=1}^k E_i^\complement  \right ) 
+    \left ( E_j \bigcap_{i=1}^{j-1} E_i^\complement  \right )
     \shortintertext{por asociatividad}
     &= 
-    E_{k+1} \left ( \bigcap_{i=1}^k E_i^c \right )
-    E_j  \left ( \bigcap_{i=1}^{j-1} E_i^c \right )
-    \shortintertext{como $j \le k$ entonces $( \bigcap_{i=1}^k E_i^c ) E_j = \varnothing$}
+    E_{k+1} \left ( \bigcap_{i=1}^k E_i^\complement  \right )
+    E_j  \left ( \bigcap_{i=1}^{j-1} E_i^\complement  \right )
+    \shortintertext{como $j \le k$ entonces $( \bigcap_{i=1}^k E_i^\complement  ) E_j = \varnothing$}
     &= \varnothing
 \end{align*}
 
@@ -34,11 +34,11 @@ además
     &\phantom{{}={}} \bigcup_{i=1}^{k+1} F_i\\
     &= \left ( \bigcup_{i=1}^{k} F_i \right ) \cup F_{k+1}
     \shortintertext{por hipótesis inductiva y definición de $F_{k+1}$}
-    &= \left ( \bigcup_{i=1}^{k} E_i \right ) \cup \left ( E_{k+1} \bigcap_{i=1}^{k} E_i^c \right )
+    &= \left ( \bigcup_{i=1}^{k} E_i \right ) \cup \left ( E_{k+1} \bigcap_{i=1}^{k} E_i^\complement  \right )
     \shortintertext{por distributividad}
-    &= \left ( E_{k+1} \cup \bigcup_{i=1}^{k} E_i \right ) \left ( \left ( \bigcap_{i=1}^{k} E_i^c \right ) \cup \left ( \bigcup_{i=1}^{k} E_i \right ) \right )
+    &= \left ( E_{k+1} \cup \bigcup_{i=1}^{k} E_i \right ) \left ( \left ( \bigcap_{i=1}^{k} E_i^\complement  \right ) \cup \left ( \bigcup_{i=1}^{k} E_i \right ) \right )
     \shortintertext{por De Morgan}
-    &= \left (\bigcup_{i=1}^{k+1} E_i \right ) \left ( \left ( \bigcup_{i=1}^{k} E_i \right )^c \cup \left ( \bigcup_{i=1}^{k} E_i \right ) \right )\\
+    &= \left (\bigcup_{i=1}^{k+1} E_i \right ) \left ( \left ( \bigcup_{i=1}^{k} E_i \right )^\complement  \cup \left ( \bigcup_{i=1}^{k} E_i \right ) \right )\\
     &= \left (\bigcup_{i=1}^{k+1} E_i \right ) S\\
     &= \bigcup_{i=1}^{k+1} E_i \qedhere
 \end{align*}
